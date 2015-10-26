@@ -1,6 +1,11 @@
 package hello;
 
 import java.util.concurrent.atomic.AtomicLong;
+
+import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,6 +33,47 @@ public class GreetingController {
     // some definitions
     static String personURI    = "http://somewhere/JohnSmith";
     static String fullName     = "John Smith";
+
+    @RequestMapping("/")
+    public String greeting()
+    {
+        Map<String, String[]> map = new HashMap<>();
+
+        String[] keys = {"new", "world", "order"};
+        String[][] values = {{"york", "delhi"}, 
+                           {"health", "war"}, 
+                           {"form", "former"}};
+
+        for (int i = 0; i < keys.length; i++)
+        {
+            map.put(keys[i], values[i]);
+        }
+        
+        StringBuilder mapString = new StringBuilder();
+        mapString.append("<ol>");
+
+        map.forEach( 
+
+            (String a, String[] b) -> 
+            {
+                mapString.append("<li>" + a + ":");
+                mapString.append("<ol>");
+
+                Arrays.stream(b)
+                      .forEach(
+                        b_el -> 
+                            mapString.append("<li>" + b_el + "</li>")
+                );
+
+                mapString.append("</ol>");
+                mapString.append("</li>");
+            }
+        );
+
+        mapString.append("</ol>");
+        
+        return "<h2>Hello, World!</h2><br>" + mapString.toString();
+    }
 
     @RequestMapping("/rdf_test")
     public RDFTest rdfTest()

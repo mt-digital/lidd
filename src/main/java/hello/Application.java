@@ -28,7 +28,6 @@ public class Application {
 
     public static void main(String[] args) {
         // XXX Here is the Spring web app, commented out to play with Jena
-        //SpringApplication.run(Application.class, args);
 
         // create an empty Model
         Model model = ModelFactory.createDefaultModel();
@@ -47,5 +46,7 @@ public class Application {
         System.out.print("YEEAAAH!" + "\n");
         System.out.print("JSON-LD:" + "\n");
         model.write(System.out, "JSON-LD");
+
+        SpringApplication.run(Application.class, args);
     }
 }
