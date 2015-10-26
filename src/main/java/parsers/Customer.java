@@ -1,4 +1,4 @@
-package hello;
+package parsers;
 
 import org.springframework.data.annotation.Id;
 
