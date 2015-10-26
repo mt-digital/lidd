@@ -1,4 +1,4 @@
-package parsers;
+package models;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,7 @@ class ApplicationConfig extends AbstractMongoConfiguration {
 
   @Override
   protected String getDatabaseName() {
-    return "e-store";
+    return "lidd";
   }
 
   @Override
