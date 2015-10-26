@@ -64,54 +64,55 @@ public class Application implements CommandLineRunner {
         {
             throw new BadInputDirectory(metadataDirectory);
         }
-        try {
-            System.out.println("Parallel:\n");
-            Files.walk(path).parallel().forEach(System.out::println);
-            //*** As expected, prints the numbers out of order in parallel **/
-            //***************************************************************/
-            //IntStream.range(0, 100).parallel().forEach(System.out::println);
 
-            System.out.println("Serial:\n");
-            Files.walk(path).forEach(System.out::println);
-            //IntStream.range(0, 100).forEach(System.out::println);
-
-            //Files.walk(path).parallel().forEach(
+        try 
+        {
             Files.walk(path).forEach(
                 f -> 
                 {
                     if (f.toString().contains("xml"))
                     {
-                        try
-                        {
-                            parseDDI(f);
-                        }
-                        catch (Exception e)
-                        {
-                            e.printStackTrace();
-                        }
+                        NormalizedMetadata nm = Parsers.ddi(f);
+
+                        repository.save(nm);
                     }
                 }
             );
         }
-        catch (Exception e) {
+        catch (Exception e) 
+        {
             e.printStackTrace();
         }
 
+
+
+            //System.out.println("Parallel:\n");
+            //Files.walk(path).parallel().forEach(System.out::println);
+            //*** As expected, prints the numbers out of order in parallel **/
+            //***************************************************************/
+            //IntStream.range(0, 100).parallel().forEach(System.out::println);
+
+            //System.out.println("Serial:\n");
+            //Files.walk(path).forEach(System.out::println);
+            //IntStream.range(0, 100).forEach(System.out::println);
+
+            //Files.walk(path).parallel().forEach(
+
         
-        System.out.println("\nFirst the mongo stuff!!");
-        System.out.println("----------------------------------\n");
-        System.out.println(args.length);
-        if (args.length > 0)
-        {
-            System.out.println("args: " + Arrays.toString(args));
-        }
+        //System.out.println("\nFirst the mongo stuff!!");
+        //System.out.println("----------------------------------\n");
+        //System.out.println(args.length);
+        //if (args.length > 0)
+        //{
+            //System.out.println("args: " + Arrays.toString(args));
+        //}
 
-        mongoExample();
+        //mongoExample();
 
-        System.out.println("\nNow printing some xml geog covers!!");
-        System.out.println("----------------------------------\n");
+        //System.out.println("\nNow printing some xml geog covers!!");
+        //System.out.println("----------------------------------\n");
 
-        xmlExample();
+        //xmlExample();
     }
 
     /**
@@ -121,13 +122,6 @@ public class Application implements CommandLineRunner {
     {
         // for this example clear out customers
         repository.deleteAll();
-
-        // save a couple customers
-        //repository.save(new Customer("Albert", "Pujols"));
-        //repository.save(new Customer("Albert", "Einstein"));
-        //repository.save(new Customer("Mary", "Magdalene"));
-        //repository.save(new Customer("John", "Magdalene"));
-        //
 
         // Create new norm metadata records
         repository.save(new NormalizedMetadata(
@@ -189,23 +183,23 @@ public class Application implements CommandLineRunner {
      * 
      * @param path path to XML file
      */
-    static void parseDDI(Path path) throws Exception
-    {
-        // 
-        if (path.toString().contains("xml"))
-        {
-            System.out.println(
-                "I would be parsing XML for file " + path + "!"
-            );
-            //NormalizedMetadata.fromDDI(path);
-        }   
-        else
-        {
-            throw new Exception(
-                String.format("We only parse XML files, not %s", path)
-            );
-        }
-    }
+    //static NormalizedMetadata parseDDI(Path path) throws Exception
+    //{
+        //// 
+        //if (path.toString().contains("xml"))
+        //{
+            //System.out.println(
+                //"I would be parsing XML for file " + path + "!"
+            //);
+            ////NormalizedMetadata.fromDDI(path);
+        //}   
+        //else
+        //{
+            //throw new Exception(
+                //String.format("We only parse XML files, not %s", path)
+            //);
+        //}
+    //}
     
 
     /**
@@ -219,7 +213,7 @@ public class Application implements CommandLineRunner {
         System.out.println("yo. example here...");    
 
         String path = 
-            "/Users/mt/workspace/rda-lod/data/icpsr-ddi-metadata/36155.xml";
+            "/Users/mturner/workspace/rda-lod/data/icpsr-ddi-metadata/36155.xml";
 
         File file = new File(path);
 
