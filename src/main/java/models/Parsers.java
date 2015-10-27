@@ -9,6 +9,8 @@ import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Files;
 
+import java.time.YearMonth;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -127,19 +129,38 @@ public class Parsers
         Pattern yearPattern = 
             Pattern.compile("[12][0-9]{3}");
 
+        Pattern yearMoPattern = 
+            Pattern.compile("[12][0-9]{3}-[01][0-9]");
+
         Pattern isoDatePattern = 
             Pattern.compile("[12][0-9]{3}-[01][0-9]-[0-3][0-9]");
 
         // see if the date str matches year or iso patterns
         Matcher yearMatcher = yearPattern.matcher(dateStr);
+        Matcher yearMoMatcher = yearMoPattern.matcher(dateStr);
         Matcher isoMatcher = isoDatePattern.matcher(dateStr);
 
         if (isoMatcher.find())
         {
-           String[] yrMoDay = dateStr.split("-");
-           year = Integer.valueOf(yrMoDay[0]);
-           month = Integer.valueOf(yrMoDay[1]);
-           day = Integer.valueOf(yrMoDay[2]);
+            String[] yrMoDay = dateStr.split("-");
+            year = Integer.valueOf(yrMoDay[0]);
+            month = Integer.valueOf(yrMoDay[1]);
+            day = Integer.valueOf(yrMoDay[2]);
+        }
+        else if (yearMoMatcher.find())
+        {
+            String[] yrMo = dateStr.split("-");
+            year = Integer.valueOf(yrMo[0]);
+            month = Integer.valueOf(yrMo[1]);
+
+            if (startOrEnd == "start")
+                day = 1;
+            else
+            {
+                // see SO question; ttp://goo.gl/Mk0nVS
+                YearMonth ym = YearMonth.of(year, month);
+                day = ym.lengthOfMonth();                
+            }
         }
         else if (yearMatcher.find())
         {
@@ -233,11 +254,6 @@ public class Parsers
                 
                 fullList.addAll(startElems);
                 fullList.addAll(endElems);
-
-                System.out.println("\n\n*** Number of start elems ***\n\n");
-                System.out.println(startElems.size());
-                System.out.println("\n\n*** Number of end elems ***\n\n");
-                System.out.println(endElems.size());
 
                 List<DateTime> dts = new ArrayList<DateTime>();
                 for (Element el : startElems)

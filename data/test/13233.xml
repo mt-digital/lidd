@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE codeBook
+SYSTEM "http://www.icpsr.umich.edu/files/DDI/Version2-1.dtd">
+    <codeBook>
+        <docDscr>
+            <citation>
+                <titlStmt>
+                    <titl>Census of Population and Housing, 2000 [United States]: Summary File 2, Alabama</titl>
+                    <IDNo>13233</IDNo>
+                </titlStmt>
+                <prodStmt>
+                    <producer abbr="ICPSR">
+                        <ExtLink URI="http://www.icpsr.umich.edu/images/icpsr-logo.gif" title="ICPSR Logo" role="image"/>
+                        Inter-university Consortium for Political and Social Research
+                        <ExtLink URI="http://www.icpsr.umich.edu/" title="URL of ICPSR Web Site" />
+                    </producer>
+                </prodStmt>
+                <verStmt>
+                    <version date="2014-07-03"></version>
+                </verStmt>
+                <holdings URI="http://www.icpsr.umich.edu/xmldocs/STUDY/13233.xml"></holdings>
+            </citation>
+        </docDscr>
+        <stdyDscr>
+            <citation>
+                <titlStmt>
+                    <titl>Census of Population and Housing, 2000 [United States]: Summary File 2, Alabama</titl>
+                    <IDNo agency="ICPSR">13233</IDNo>
+                </titlStmt>
+                <rspStmt>
+                    <AuthEnty affiliation="United States Department of Commerce. Bureau of the Census">United States Department of Commerce. Bureau of the Census</AuthEnty>
+                </rspStmt>
+                <prodStmt>
+                    <prodDate>Please see full citation.</prodDate>
+                </prodStmt>
+                <distStmt>
+                    <distrbtr abbr="ICPSR" affiliation="Institute for Social Research, University of Michigan" URI="http://www.icpsr.umich.edu">
+                        <ExtLink URI="http://www.icpsr.umich.edu/images/icpsr-logo.gif" title="Logo" />
+                        Inter-university Consortium for Political and Social Research
+                        <ExtLink URI="http://www.icpsr.umich.edu/" title="URL" />
+                    </distrbtr>
+                    <distDate date="2002-03-19">2002-03-19</distDate>
+                </distStmt>
+                <serStmt>
+                    <serName ID="Series166">Census of Population and Housing, 2000 [United States] Series</serName>
+                </serStmt>
+                <verStmt>
+                    <version date="2013-05-24">2013-05-24</version>
+                </verStmt>
+                <verStmt>
+                    <version date="2013-05-24">2013-05-24</version>
+                    <notes>Multiple Census data file segments were repackaged for distribution into a single zip archive per dataset. No changes were made to the data or documentation.</notes>
+                </verStmt>
+                <verStmt>
+                    <version date="2006-01-12">2006-01-12</version>
+                    <notes>All files were removed from dataset 256 and flagged as study-level files, so that they will accompany all downloads.</notes>
+                </verStmt>
+                <verStmt>
+                    <version date="2006-01-12">2006-01-12</version>
+                    <notes>All files were removed from dataset 255 and flagged as study-level files, so that they will accompany all downloads.</notes>
+                </verStmt>
+                <verStmt>
+                    <version date="2006-01-12">2006-01-12</version>
+                    <notes>All files were removed from dataset 254 and flagged as study-level files, so that they will accompany all downloads.</notes>
+                </verStmt>
+                <verStmt>
+                    <version date="2006-01-12">2006-01-12</version>
+                    <notes>All files were removed from dataset 253 and flagged as study-level files, so that they will accompany all downloads.</notes>
+                </verStmt>
+                <verStmt>
+                    <version date="2006-01-12">2006-01-12</version>
+                    <notes>All files were removed from dataset 252 and flagged as study-level files, so that they will accompany all downloads.</notes>
+                </verStmt>
+                <verStmt>
+                    <version date="2004-11-11">2004-11-11</version>
+                    <notes>The data dictionary, SAS, SPSS, and Stata data
+ definition statements, Parts 252-255, have been corrected. The
+codebook, Part 256, has been updated by the Bureau of the Census.</notes>
+                </verStmt>
+                <verStmt>
+                    <version date="2004-11-11">2004-11-11</version>
+                    <notes>The SAS, SPSS, and Stata data
+ definition statements, Parts 253-255, have been corrected. The
+codebook, Part 256, has been updated by the Bureau of the Census.</notes>
+                </verStmt>
+                <biblCit>United States Department of Commerce. Bureau of the Census. Census of Population and Housing, 2000 [United States]: Summary File 2, Alabama. ICPSR13233-v2. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2004. http://doi.org/10.3886/ICPSR13233</biblCit>
+                <notes>Comma-delimited with SAS, SPSS, and Stata data
+definition statements</notes>
+            </citation>
+            <stdyInfo>
+                    <subject>
+                        <keyword vocab="thesaurus">census data</keyword>
+                        <keyword vocab="thesaurus">ethnicity</keyword>
+                        <keyword vocab="thesaurus">Hispanic origins</keyword>
+                        <keyword vocab="thesaurus">household composition</keyword>
+                        <keyword vocab="thesaurus">housing</keyword>
+                        <keyword vocab="thesaurus">housing conditions</keyword>
+                        <keyword vocab="thesaurus">Native Americans</keyword>
+                        <keyword vocab="thesaurus">population</keyword>
+                        <keyword vocab="thesaurus">race</keyword>
+                        <topcClas source="archive" vocab="ICPSR subject classifications">ICPSR I.A.1.e. Census Enumerations: Historical and Contemporary Population Characteristics, United States, Decennial Censuses, 2000 Census</topcClas>
+                        <topcClas source="archive" vocab="RCMD subject classifications">RCMD IX. Minority Populations</topcClas>
+                    </subject>
+                    <abstract>Summary File 2 contains 100-percent United States decennial
+Census data, which is the information compiled from the questions
+asked of all people and about every housing unit. Population items
+include sex, age, race, Hispanic or Latino origin, household
+relationship, and group quarters occupancy. Housing items include
+occupancy status, vacancy status, and tenure (owner occupied or renter
+occupied). The 100-percent data are presented in 36 population tables
+("PCT") and 11 housing tables ("HCT") down to the census tract
+level. Each table is iterated for 250 population groups: the total
+population, 132 race groups, 78 American Indian and Alaska Native
+tribe categories (reflecting 39 individual tribes), and 39 Hispanic or
+Latino groups. The presentation of tables for any of the 250
+population groups is subject to a population threshold of 100 or more
+people. That is, if there were fewer than 100 people in a specific
+population group in a specific geographic area, their population and
+housing characteristics data are not available for that geographic
+area.</abstract>
+                    <sumDscr>
+                        <timePrd event="single" date="2000" cycle="P1"> </timePrd>
+                        <collDate event="single" date="2000" cycle="P1"> </collDate>
+                        <nation>Please see geographic coverage.</nation>
+                        <geogCover>United States</geogCover>
+                        <universe>All persons in housing units in Alabama in 2000.</universe>
+                        <dataKind>census/enumeration data</dataKind>
+                    </sumDscr>
+            </stdyInfo>
+            <method>
+                <dataColl>
+                    <sources>
+                        <dataSrc>self-enumerated questionnaires</dataSrc>
+                    </sources>
+                    <cleanOps>Created variable labels and/or value labels.</cleanOps>
+                </dataColl>
+                <notes>Because of the number of files per state in
+Summary File 2, ICPSR has given each state its own ICPSR study number
+in the range ICPSR 13233-13284.</notes>
+                <notes>The data are provided in four
+segments (files) per iteration. These segments are PCT1-PCT4,
+PCT5-PCT19, PCT20-PCT36, and HCT1-HCT11. The iterations are Parts
+1-250, the Geographic Header file is Part 251. The Geographic Header
+file is in fixed-format ASCII and the Table files are in
+comma-delimited ASCII format. The Geographic Header file has 83
+variables, Segment 01 has 224 variables, Segment 02 has 241 variables,
+Segment 03 has 179 variables, and Segment 04 has 141 variables. When
+all the segments are merged, there are 849 variables.</notes>
+            </method>
+            <dataAccs>
+                <setAvail media="online">
+                    <accsPlac URI="http://www.icpsr.umich.edu">Ann Arbor, Mi.:  Inter-university Consortium for Political and Social Research</accsPlac>
+                    <notes>Data file(s), zip Data file(s), and electronic documentation.</notes>
+                </setAvail>
+                <useStmt>
+                    <specPerm>Additional special permissions, where applicable, are described in the restrictions field.</specPerm>
+
+		<conditions>
+		    <![CDATA[
+		    <p>Please read the terms of use below. If you agree to them, click on the "I Agree" button to proceed. If you do not agree, you can click on the "I Do Not Agree" button to return to the home page.</p> <p>ICPSR adheres to the principles of the <a href="http://www.datasealofapproval.org/">Data Seal of Approval</a>, which, in part, require the data consumer to comply with access regulations imposed both by law and by the data repository, and to conform to codes of conduct that are generally accepted in higher education and scientific research for the exchange of knowledge and information. </p> <p>These data are distributed under the following terms of use, which are governed by ICPSR. By continuing past this point to the data retrieval process, you signify your agreement to comply with the requirements stated below:</p> <h2>Privacy of RESEARCH SUBJECTS</h2> <p>Any intentional identification of a RESEARCH SUBJECT (whether an individual or an organization) or unauthorized disclosure of his or her confidential information violates the PROMISE OF CONFIDENTIALITY given to the providers of the information. Therefore, users of data agree:</p> <ul> <li><p>To use these datasets solely for research or statistical purposes and not for investigation of specific RESEARCH SUBJECTS, except when identification is authorized in writing by ICPSR (<a href="mailto:netmail@icpsr.umich.edu">netmail@icpsr.umich.edu</a> )</p></li> <li><p>To make no use of the identity of any RESEARCH SUBJECT discovered inadvertently, and to advise ICPSR of any such discovery (<a href="mailto:netmail@icpsr.umich.edu">netmail@icpsr.umich.edu</a> )</p></li> </ul> <h2>Redistribution of Data</h2> <p>You agree not to redistribute data or other materials without the written agreement of ICPSR, unless: </p> <ol> <li><p>You serve as the OFFICIAL or DESIGNATED REPRESENTATIVE at an ICPSR MEMBER INSTITUTION and are assisting AUTHORIZED USERS with obtaining data, or</p></li> <li><p>You are collaborating with other AUTHORIZED USERS to analyze the data for research or instructional purposes.</p></li> </ol> <p>When sharing data or other materials in these approved ways, you must include all accompanying files with the data, including terms of use. More information on <a href="http://www.icpsr.umich.edu/icpsrweb/content/datamanagement/policies/redistribute.html"> permission to redistribute data</a> can be found on the ICPSR Web site.</p>
+
+
+<h2>Citing Data</h2> <p>You agree to reference the recommended bibliographic citation in any publication that employs resources provided by ICPSR. Authors of publications based on ICPSR data are required to send citations of their published works to ICPSR for inclusion in a database of related publications (<a href="mailto:bibliography@icpsr.umich.edu">bibliography@icpsr.umich.edu</a>) .</p> <h2>Disclaimer</h2> <p>You acknowledge that the original collector of the data, ICPSR, and the relevant funding agency bear no responsibility for use of the data or for interpretations or inferences based upon such uses.</p> <h2>Violations</h2> <p>If ICPSR determines that the terms of this agreement have been violated, ICPSR will act according to our <a href="http://www.icpsr.umich.edu/ICPSR/support/faqs/2008/10/what-are-consequences-of-violating">policy on terms of use violations</a>. Sanctions can include:</p> <ul> <li><p>ICPSR may revoke the existing agreement, demand the return of the data in question, and deny all future access to ICPSR data.</p></li> <li><p>The violation may be reported to the Research Integrity Officer, Institutional Review Board, or Human Subjects Review Committee of the user's institution. A range of sanctions are available to institutions including revocation of tenure and termination.</p></li> <li><p>If the confidentiality of human subjects has been violated, the case may be reported to the Federal Office for Human Research Protections. This may result in an investigation of the user's institution, which can result in institution-wide sanctions including the suspension of all research grants. </p></li> <li><p>A court may award the payment of damages to any individual(s)/organization(s) harmed by the breach of the agreement.</p></li> </ul> <h2>Definitions</h2> <dl> <dt>authorized user</dt> <dd>A faculty member, staff member, or student at a member institution</dd> <dt>ICPSR</dt> <dd>Inter-university Consortium for Political and Social Research</dd> <dt>member institution</dt> <dd>An institutional member of ICPSR</dd> <dt>Official/Designated Representative</dt> <dd>An individual appointed to represent a university's interests in ICPSR. This individual is also charged with providing user support to campus users. </dd> <dt>promise of confidentiality</dt> <dd>A promise to a respondent or research participant that the information the respondent provides will not be disseminated without the permission of the respondent; that the fact that the respondent participated in the study will not be disclosed; and that disseminated information will include no linkages to the identity of the respondent. Such a promise encompasses traditional notions of both confidentiality and anonymity. Names and other identifying information regarding respondents, proxies, or other persons on whom the respondent or proxy provides information, are presumed to be confidential.</dd> <dt>research subject</dt> <dd>A person or organization observed for purposes of research. Also called a respondent. A respondent is generally a survey respondent or informant, experimental or observational subject, focus group participant, or any other person providing information to a study or on whose behalf a proxy provides information. </dd> </dl>
+		    ]]>
+		    <p>AVAILABLE.  This study is freely available to the general public.</p>
+		</conditions>
+
+		<disclaimer>The original collector of the data, ICPSR,
+		and the relevant funding agency bear no responsibility
+		for use of the data or for interpretations or inferences
+		based upon such uses.  </disclaimer>
+                    </useStmt>
+            </dataAccs>
+        </stdyDscr>
+        <fileDscr ID="F1">
+            <fileTxt ID="Part1">
+                <fileName>Total Population</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4622</notes>
+        </fileDscr>
+        <fileDscr ID="F2">
+            <fileTxt ID="Part2">
+                <fileName>White Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4063</notes>
+        </fileDscr>
+        <fileDscr ID="F3">
+            <fileTxt ID="Part3">
+                <fileName>White Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4080</notes>
+        </fileDscr>
+        <fileDscr ID="F4">
+            <fileTxt ID="Part4">
+                <fileName>Black or African American Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2565</notes>
+        </fileDscr>
+        <fileDscr ID="F5">
+            <fileTxt ID="Part5">
+                <fileName>Black or African American Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2584</notes>
+        </fileDscr>
+        <fileDscr ID="F6">
+            <fileTxt ID="Part6">
+                <fileName>American Indian and Alaska Native Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>134</notes>
+        </fileDscr>
+        <fileDscr ID="F7">
+            <fileTxt ID="Part7">
+                <fileName>American Indian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>112</notes>
+        </fileDscr>
+        <fileDscr ID="F9">
+            <fileTxt ID="Part9">
+                <fileName>American Indian and Alaska Native Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>256</notes>
+        </fileDscr>
+        <fileDscr ID="F10">
+            <fileTxt ID="Part10">
+                <fileName>American Indian Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>255</notes>
+        </fileDscr>
+        <fileDscr ID="F11">
+            <fileTxt ID="Part11">
+                <fileName>Alaska Native Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>79</notes>
+        </fileDscr>
+        <fileDscr ID="F12">
+            <fileTxt ID="Part12">
+                <fileName>Asian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>208</notes>
+        </fileDscr>
+        <fileDscr ID="F13">
+            <fileTxt ID="Part13">
+                <fileName>Asian Indian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>54</notes>
+        </fileDscr>
+        <fileDscr ID="F14">
+            <fileTxt ID="Part14">
+                <fileName>Bangladeshi Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F15">
+            <fileTxt ID="Part15">
+                <fileName>Cambodian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>8</notes>
+        </fileDscr>
+        <fileDscr ID="F16">
+            <fileTxt ID="Part16">
+                <fileName>Chinese Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>50</notes>
+        </fileDscr>
+        <fileDscr ID="F17">
+            <fileTxt ID="Part17">
+                <fileName>Chinese, Except Taiwanese, Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>47</notes>
+        </fileDscr>
+        <fileDscr ID="F18">
+            <fileTxt ID="Part18">
+                <fileName>Taiwanese Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4</notes>
+        </fileDscr>
+        <fileDscr ID="F19">
+            <fileTxt ID="Part19">
+                <fileName>Filipino Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>24</notes>
+        </fileDscr>
+        <fileDscr ID="F21">
+            <fileTxt ID="Part21">
+                <fileName>Indonesian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F22">
+            <fileTxt ID="Part22">
+                <fileName>Japanese Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>21</notes>
+        </fileDscr>
+        <fileDscr ID="F23">
+            <fileTxt ID="Part23">
+                <fileName>Korean Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>37</notes>
+        </fileDscr>
+        <fileDscr ID="F24">
+            <fileTxt ID="Part24">
+                <fileName>Laotian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>11</notes>
+        </fileDscr>
+        <fileDscr ID="F26">
+            <fileTxt ID="Part26">
+                <fileName>Pakistani Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>7</notes>
+        </fileDscr>
+        <fileDscr ID="F27">
+            <fileTxt ID="Part27">
+                <fileName>Sri Lankan Alone</fileName>
+            </fileTxt>
+            <notes>0</notes>
+        </fileDscr>
+        <fileDscr ID="F28">
+            <fileTxt ID="Part28">
+                <fileName>Thai Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>9</notes>
+        </fileDscr>
+        <fileDscr ID="F29">
+            <fileTxt ID="Part29">
+                <fileName>Vietnamese Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>37</notes>
+        </fileDscr>
+        <fileDscr ID="F30">
+            <fileTxt ID="Part30">
+                <fileName>Other Specified Asian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F31">
+            <fileTxt ID="Part31">
+                <fileName>Asian Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>254</notes>
+        </fileDscr>
+        <fileDscr ID="F32">
+            <fileTxt ID="Part32">
+                <fileName>Asian Indian Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>62</notes>
+        </fileDscr>
+        <fileDscr ID="F33">
+            <fileTxt ID="Part33">
+                <fileName>Bangladeshi Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F34">
+            <fileTxt ID="Part34">
+                <fileName>Cambodian Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>8</notes>
+        </fileDscr>
+        <fileDscr ID="F35">
+            <fileTxt ID="Part35">
+                <fileName>Chinese Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>54</notes>
+        </fileDscr>
+        <fileDscr ID="F36">
+            <fileTxt ID="Part36">
+                <fileName>Chinese, Except Taiwanese, Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>52</notes>
+        </fileDscr>
+        <fileDscr ID="F37">
+            <fileTxt ID="Part37">
+                <fileName>Taiwanese Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>6</notes>
+        </fileDscr>
+        <fileDscr ID="F38">
+            <fileTxt ID="Part38">
+                <fileName>Filipino Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>30</notes>
+        </fileDscr>
+        <fileDscr ID="F40">
+            <fileTxt ID="Part40">
+                <fileName>Indonesian Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F41">
+            <fileTxt ID="Part41">
+                <fileName>Japanese Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>29</notes>
+        </fileDscr>
+        <fileDscr ID="F42">
+            <fileTxt ID="Part42">
+                <fileName>Korean Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>41</notes>
+        </fileDscr>
+        <fileDscr ID="F43">
+            <fileTxt ID="Part43">
+                <fileName>Laotian Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>11</notes>
+        </fileDscr>
+        <fileDscr ID="F44">
+            <fileTxt ID="Part44">
+                <fileName>Malaysian Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F45">
+            <fileTxt ID="Part45">
+                <fileName>Pakistani Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>9</notes>
+        </fileDscr>
+        <fileDscr ID="F46">
+            <fileTxt ID="Part46">
+                <fileName>Sri Lankan Alone or in Any Combination</fileName>
+            </fileTxt>
+            <notes>0</notes>
+        </fileDscr>
+        <fileDscr ID="F47">
+            <fileTxt ID="Part47">
+                <fileName>Thai Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>12</notes>
+        </fileDscr>
+        <fileDscr ID="F48">
+            <fileTxt ID="Part48">
+                <fileName>Vietnamese Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>42</notes>
+        </fileDscr>
+        <fileDscr ID="F49">
+            <fileTxt ID="Part49">
+                <fileName>Other Specified Asian Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>5</notes>
+        </fileDscr>
+        <fileDscr ID="F50">
+            <fileTxt ID="Part50">
+                <fileName>Native Hawaiian and Other Pacific Islander Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>14</notes>
+        </fileDscr>
+        <fileDscr ID="F51">
+            <fileTxt ID="Part51">
+                <fileName>Polynesian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>6</notes>
+        </fileDscr>
+        <fileDscr ID="F52">
+            <fileTxt ID="Part52">
+                <fileName>Native Hawaiian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4</notes>
+        </fileDscr>
+        <fileDscr ID="F53">
+            <fileTxt ID="Part53">
+                <fileName>Samoan Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F55">
+            <fileTxt ID="Part55">
+                <fileName>Micronesian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>6</notes>
+        </fileDscr>
+        <fileDscr ID="F56">
+            <fileTxt ID="Part56">
+                <fileName>Guamanian or Chamorro Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>6</notes>
+        </fileDscr>
+        <fileDscr ID="F60">
+            <fileTxt ID="Part60">
+                <fileName>Native Hawaiian and Other Pacific Islander Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>26</notes>
+        </fileDscr>
+        <fileDscr ID="F61">
+            <fileTxt ID="Part61">
+                <fileName>Polynesian Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>14</notes>
+        </fileDscr>
+        <fileDscr ID="F62">
+            <fileTxt ID="Part62">
+                <fileName>Native Hawaiian Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>9</notes>
+        </fileDscr>
+        <fileDscr ID="F63">
+            <fileTxt ID="Part63">
+                <fileName>Samoan Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4</notes>
+        </fileDscr>
+        <fileDscr ID="F65">
+            <fileTxt ID="Part65">
+                <fileName>Micronesian Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>10</notes>
+        </fileDscr>
+        <fileDscr ID="F66">
+            <fileTxt ID="Part66">
+                <fileName>Guamanian or Chamorro Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>9</notes>
+        </fileDscr>
+        <fileDscr ID="F69">
+            <fileTxt ID="Part69">
+                <fileName>Other Specified Pacific Islander Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F70">
+            <fileTxt ID="Part70">
+                <fileName>Some Other Race Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>181</notes>
+        </fileDscr>
+        <fileDscr ID="F71">
+            <fileTxt ID="Part71">
+                <fileName>Some Other Race Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>233</notes>
+        </fileDscr>
+        <fileDscr ID="F72">
+            <fileTxt ID="Part72">
+                <fileName>Two or More Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>253</notes>
+        </fileDscr>
+        <fileDscr ID="F73">
+            <fileTxt ID="Part73">
+                <fileName>Two Races Including Some Other Race</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>62</notes>
+        </fileDscr>
+        <fileDscr ID="F74">
+            <fileTxt ID="Part74">
+                <fileName>Two Races Excluding Some Other Race, and Three or More Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>200</notes>
+        </fileDscr>
+        <fileDscr ID="F75">
+            <fileTxt ID="Part75">
+                <fileName>Two Races Excluding Some Other Race</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>192</notes>
+        </fileDscr>
+        <fileDscr ID="F76">
+            <fileTxt ID="Part76">
+                <fileName>Three or More Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>23</notes>
+        </fileDscr>
+        <fileDscr ID="F77">
+            <fileTxt ID="Part77">
+                <fileName>White, Black or African American</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>37</notes>
+        </fileDscr>
+        <fileDscr ID="F78">
+            <fileTxt ID="Part78">
+                <fileName>White, American Indian and Alaska Native</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>113</notes>
+        </fileDscr>
+        <fileDscr ID="F79">
+            <fileTxt ID="Part79">
+                <fileName>White, Asian</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>34</notes>
+        </fileDscr>
+        <fileDscr ID="F80">
+            <fileTxt ID="Part80">
+                <fileName>White, Native Hawaiian and Other Pacific Islander</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4</notes>
+        </fileDscr>
+        <fileDscr ID="F81">
+            <fileTxt ID="Part81">
+                <fileName>White, Some Other Race</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>44</notes>
+        </fileDscr>
+        <fileDscr ID="F82">
+            <fileTxt ID="Part82">
+                <fileName>Black or African American, American Indian and Alaska Native</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>23</notes>
+        </fileDscr>
+        <fileDscr ID="F83">
+            <fileTxt ID="Part83">
+                <fileName>Black or African American, Asian</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>14</notes>
+        </fileDscr>
+        <fileDscr ID="F84">
+            <fileTxt ID="Part84">
+                <fileName>Black or African American, Native Hawaiian and Other Pacific Islander</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F85">
+            <fileTxt ID="Part85">
+                <fileName>Black or African American, Some Other Race</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>16</notes>
+        </fileDscr>
+        <fileDscr ID="F86">
+            <fileTxt ID="Part86">
+                <fileName>American Indian and Alaska Native, Asian</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F88">
+            <fileTxt ID="Part88">
+                <fileName>American Indian and Alaska Native, Some Other Race</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4</notes>
+        </fileDscr>
+        <fileDscr ID="F89">
+            <fileTxt ID="Part89">
+                <fileName>Asian, Native Hawaiian and Other Pacific Islander</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F90">
+            <fileTxt ID="Part90">
+                <fileName>Asian, Some Other Race</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>7</notes>
+        </fileDscr>
+        <fileDscr ID="F92">
+            <fileTxt ID="Part92">
+                <fileName>White, Black or African American, American Indian and Alaska Native</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>10</notes>
+        </fileDscr>
+        <fileDscr ID="F95">
+            <fileTxt ID="Part95">
+                <fileName>White, Black or African American, Some Other Race</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F96">
+            <fileTxt ID="Part96">
+                <fileName>White, American Indian and Alaska Native, Asian</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F98">
+            <fileTxt ID="Part98">
+                <fileName>White, American Indian and Alaska Native, Some Other Race</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F99">
+            <fileTxt ID="Part99">
+                <fileName>White, Asian, Native Hawaiian and Other Pacific Islander</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F100">
+            <fileTxt ID="Part100">
+                <fileName>White, Asian, Some Other Race</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F105">
+            <fileTxt ID="Part105">
+                <fileName>Black or African American, Asian, Native Hawaiian and Other Pacific Islander</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F138">
+            <fileTxt ID="Part138">
+                <fileName>Apache Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F139">
+            <fileTxt ID="Part139">
+                <fileName>Apache Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>5</notes>
+        </fileDscr>
+        <fileDscr ID="F140">
+            <fileTxt ID="Part140">
+                <fileName>Blackfeet Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F141">
+            <fileTxt ID="Part141">
+                <fileName>Blackfeet Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>7</notes>
+        </fileDscr>
+        <fileDscr ID="F142">
+            <fileTxt ID="Part142">
+                <fileName>Cherokee Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>67</notes>
+        </fileDscr>
+        <fileDscr ID="F143">
+            <fileTxt ID="Part143">
+                <fileName>Cherokee Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>117</notes>
+        </fileDscr>
+        <fileDscr ID="F147">
+            <fileTxt ID="Part147">
+                <fileName>Chickasaw Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F148">
+            <fileTxt ID="Part148">
+                <fileName>Chippewa Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F149">
+            <fileTxt ID="Part149">
+                <fileName>Chippewa Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F150">
+            <fileTxt ID="Part150">
+                <fileName>Choctaw Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>12</notes>
+        </fileDscr>
+        <fileDscr ID="F151">
+            <fileTxt ID="Part151">
+                <fileName>Choctaw Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>18</notes>
+        </fileDscr>
+        <fileDscr ID="F158">
+            <fileTxt ID="Part158">
+                <fileName>Creek Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>21</notes>
+        </fileDscr>
+        <fileDscr ID="F159">
+            <fileTxt ID="Part159">
+                <fileName>Creek Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>31</notes>
+        </fileDscr>
+        <fileDscr ID="F168">
+            <fileTxt ID="Part168">
+                <fileName>Iroquois Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F169">
+            <fileTxt ID="Part169">
+                <fileName>Iroquois Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F172">
+            <fileTxt ID="Part172">
+                <fileName>Latin American Indian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F173">
+            <fileTxt ID="Part173">
+                <fileName>Latin American Indian Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>5</notes>
+        </fileDscr>
+        <fileDscr ID="F174">
+            <fileTxt ID="Part174">
+                <fileName>Lumbee Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F175">
+            <fileTxt ID="Part175">
+                <fileName>Lumbee Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F179">
+            <fileTxt ID="Part179">
+                <fileName>Navajo Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F195">
+            <fileTxt ID="Part195">
+                <fileName>Seminole Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F198">
+            <fileTxt ID="Part198">
+                <fileName>Sioux Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F199">
+            <fileTxt ID="Part199">
+                <fileName>Sioux Alone or in Any Combination</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4</notes>
+        </fileDscr>
+        <fileDscr ID="F212">
+            <fileTxt ID="Part212">
+                <fileName>Hispanic or Latino (of Any Race)</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>442</notes>
+        </fileDscr>
+        <fileDscr ID="F213">
+            <fileTxt ID="Part213">
+                <fileName>Mexican</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>270</notes>
+        </fileDscr>
+        <fileDscr ID="F214">
+            <fileTxt ID="Part214">
+                <fileName>Puerto Rican</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>53</notes>
+        </fileDscr>
+        <fileDscr ID="F215">
+            <fileTxt ID="Part215">
+                <fileName>Cuban</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>22</notes>
+        </fileDscr>
+        <fileDscr ID="F216">
+            <fileTxt ID="Part216">
+                <fileName>Other Hispanic or Latino</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>145</notes>
+        </fileDscr>
+        <fileDscr ID="F217">
+            <fileTxt ID="Part217">
+                <fileName>Dominican (Dominican Republic)</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4</notes>
+        </fileDscr>
+        <fileDscr ID="F218">
+            <fileTxt ID="Part218">
+                <fileName>Central American</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>39</notes>
+        </fileDscr>
+        <fileDscr ID="F219">
+            <fileTxt ID="Part219">
+                <fileName>Costa Rican</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F220">
+            <fileTxt ID="Part220">
+                <fileName>Guatemalan</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>20</notes>
+        </fileDscr>
+        <fileDscr ID="F221">
+            <fileTxt ID="Part221">
+                <fileName>Honduran</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>7</notes>
+        </fileDscr>
+        <fileDscr ID="F222">
+            <fileTxt ID="Part222">
+                <fileName>Nicaraguan</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F223">
+            <fileTxt ID="Part223">
+                <fileName>Panamanian</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>9</notes>
+        </fileDscr>
+        <fileDscr ID="F224">
+            <fileTxt ID="Part224">
+                <fileName>Salvadoran</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>6</notes>
+        </fileDscr>
+        <fileDscr ID="F225">
+            <fileTxt ID="Part225">
+                <fileName>South American</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>22</notes>
+        </fileDscr>
+        <fileDscr ID="F226">
+            <fileTxt ID="Part226">
+                <fileName>Argentinian</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F227">
+            <fileTxt ID="Part227">
+                <fileName>Bolivian</fileName>
+            </fileTxt>
+            <notes>0</notes>
+        </fileDscr>
+        <fileDscr ID="F228">
+            <fileTxt ID="Part228">
+                <fileName>Chilean</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F229">
+            <fileTxt ID="Part229">
+                <fileName>Colombian</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>9</notes>
+        </fileDscr>
+        <fileDscr ID="F230">
+            <fileTxt ID="Part230">
+                <fileName>Ecuadorian</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2</notes>
+        </fileDscr>
+        <fileDscr ID="F232">
+            <fileTxt ID="Part232">
+                <fileName>Peruvian</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4</notes>
+        </fileDscr>
+        <fileDscr ID="F233">
+            <fileTxt ID="Part233">
+                <fileName>Uruguayan</fileName>
+            </fileTxt>
+            <notes>0</notes>
+        </fileDscr>
+        <fileDscr ID="F234">
+            <fileTxt ID="Part234">
+                <fileName>Venezuelan</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4</notes>
+        </fileDscr>
+        <fileDscr ID="F235">
+            <fileTxt ID="Part235">
+                <fileName>Spaniard</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>3</notes>
+        </fileDscr>
+        <fileDscr ID="F236">
+            <fileTxt ID="Part236">
+                <fileName>All Other Hispanic or Latino</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>92</notes>
+        </fileDscr>
+        <fileDscr ID="F237">
+            <fileTxt ID="Part237">
+                <fileName>Not Hispanic or Latino</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4607</notes>
+        </fileDscr>
+        <fileDscr ID="F238">
+            <fileTxt ID="Part238">
+                <fileName>Not Hispanic or Latino, White Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4042</notes>
+        </fileDscr>
+        <fileDscr ID="F239">
+            <fileTxt ID="Part239">
+                <fileName>Not Hispanic or Latino, White Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>4058</notes>
+        </fileDscr>
+        <fileDscr ID="F240">
+            <fileTxt ID="Part240">
+                <fileName>Not Hispanic or Latino, Black or African American Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2560</notes>
+        </fileDscr>
+        <fileDscr ID="F241">
+            <fileTxt ID="Part241">
+                <fileName>Not Hispanic or Latino, Black or African American Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>2577</notes>
+        </fileDscr>
+        <fileDscr ID="F242">
+            <fileTxt ID="Part242">
+                <fileName>Not Hispanic or Latino, American Indian and Alaska Native Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>130</notes>
+        </fileDscr>
+        <fileDscr ID="F243">
+            <fileTxt ID="Part243">
+                <fileName>Not Hispanic or Latino, American Indian and Alaska Native Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>246</notes>
+        </fileDscr>
+        <fileDscr ID="F244">
+            <fileTxt ID="Part244">
+                <fileName>Not Hispanic or Latino, Asian Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>207</notes>
+        </fileDscr>
+        <fileDscr ID="F245">
+            <fileTxt ID="Part245">
+                <fileName>Not Hispanic or Latino, Asian Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>249</notes>
+        </fileDscr>
+        <fileDscr ID="F246">
+            <fileTxt ID="Part246">
+                <fileName>Not Hispanic or Latino, Native Hawaiian and Other Pacific Islander Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>11</notes>
+        </fileDscr>
+        <fileDscr ID="F247">
+            <fileTxt ID="Part247">
+                <fileName>Not Hispanic or Latino, Native Hawaiian and Other Pacific Islander Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>23</notes>
+        </fileDscr>
+        <fileDscr ID="F248">
+            <fileTxt ID="Part248">
+                <fileName>Not Hispanic or Latino, Some Other Race Alone</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>22</notes>
+        </fileDscr>
+        <fileDscr ID="F249">
+            <fileTxt ID="Part249">
+                <fileName>Not Hispanic or Latino, Some Other Race Alone or in Combination With One or More Other Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>54</notes>
+        </fileDscr>
+        <fileDscr ID="F250">
+            <fileTxt ID="Part250">
+                <fileName>Not Hispanic or Latino, Two or More Races</fileName>
+                <fileType>OTHER</fileType>
+            </fileTxt>
+            <notes>226</notes>
+        </fileDscr>
+        <fileDscr ID="F251">
+            <fileTxt ID="Part251">
+                <fileName>Geographic Header File</fileName>
+                <fileType>ASCII</fileType>
+            </fileTxt>
+            <notes>2817</notes>
+        </fileDscr>
+    </codeBook>

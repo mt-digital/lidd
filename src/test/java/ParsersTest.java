@@ -24,6 +24,7 @@ public class ParsersTest
     public void testDDIDateParser() throws Exception
     {
         String yearDate = "1990";
+        String yearMoDate = "1976-11";
         String isoDate = "2001-11-01";
         String badDate = "2012-15-30"; 
 
@@ -32,6 +33,12 @@ public class ParsersTest
 
         assertEquals(new DateTime(1990, 12, 31, 23, 59),
             Parsers.parseDdiDate(yearDate, "end"));
+
+        assertEquals(new DateTime(1976, 11, 1, 0, 0),
+            Parsers.parseDdiDate(yearMoDate, "start"));
+
+        assertEquals(new DateTime(1976, 11, 30, 23, 59),
+            Parsers.parseDdiDate(yearMoDate, "end"));
 
         assertEquals(new DateTime(2001, 11, 1, 0, 0),
             Parsers.parseDdiDate(isoDate, "start"));
@@ -66,5 +73,30 @@ public class ParsersTest
         NormalizedMetadata generatedNm00010 = Parsers.ddi(path00010);
 
         assertTrue(generatedNm00010.equals(expectedNm00010));
+        
+        
+        /*
+         * 13233.xml has <timePrd event="single" date="2000" cycle="P1"></timePrd>
+         */ 
+        // path from root project dir
+        //Path path13233 = Paths.get("data/test/13233.xml");
+
+        //// kind of cheating since it's exactly what the parser does
+        //String raw13233 = new String(
+            //Files.readAllBytes(path13233)
+        //);
+
+        //NormalizedMetadata expectedNm13233 = new NormalizedMetadata(
+            //"United States Congressional District Data Books, 1961-1965",
+            //new String[] 
+                //{"United States Department of Commerce. Bureau of the Census"},
+            //raw13233,
+            //new DateTime(2000, 1, 1, 0, 0),
+            //new DateTime(, 12, 31, 23, 59)
+        //);
+
+        //NormalizedMetadata generatedNm13233 = Parsers.ddi(path13233);
+
+        //assertTrue(generatedNm13233.equals(expectedNm13233));
     }
 }

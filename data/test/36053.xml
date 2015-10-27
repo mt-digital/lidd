@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE codeBook
+SYSTEM "http://www.icpsr.umich.edu/files/DDI/Version2-1.dtd">
+    <codeBook>
+        <docDscr>
+            <citation>
+                <titlStmt>
+                    <titl>Cognition and Aging in the USA (CogUSA) 2007-2009</titl>
+                    <IDNo>36053</IDNo>
+                </titlStmt>
+                <prodStmt>
+                    <producer abbr="ICPSR">
+                        <ExtLink URI="http://www.icpsr.umich.edu/images/icpsr-logo.gif" title="ICPSR Logo" role="image"/>
+                        Inter-university Consortium for Political and Social Research
+                        <ExtLink URI="http://www.icpsr.umich.edu/" title="URL of ICPSR Web Site" />
+                    </producer>
+                </prodStmt>
+                <verStmt>
+                    <version date="2015-04-16"></version>
+                </verStmt>
+                <holdings URI="http://www.icpsr.umich.edu/xmldocs/STUDY/36053.xml"></holdings>
+            </citation>
+        </docDscr>
+        <stdyDscr>
+            <citation>
+                <titlStmt>
+                    <titl>Cognition and Aging in the USA (CogUSA) 2007-2009</titl>
+                    <IDNo agency="ICPSR">36053</IDNo>
+                </titlStmt>
+                <rspStmt>
+                    <AuthEnty affiliation="University of Southern California">McArdle, John</AuthEnty>
+                    <AuthEnty affiliation="University of Michigan">Rodgers, Willard</AuthEnty>
+                    <AuthEnty affiliation="University of Michigan">Willis, Robert</AuthEnty>
+                </rspStmt>
+                <prodStmt>
+                    <prodDate>Please see full citation.</prodDate>
+                    <fundAg>United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging</fundAg>
+                    <grantNo>AG-07407-14</grantNo>
+                </prodStmt>
+                <distStmt>
+                    <distrbtr abbr="ICPSR" affiliation="Institute for Social Research, University of Michigan" URI="http://www.icpsr.umich.edu">
+                        <ExtLink URI="http://www.icpsr.umich.edu/images/icpsr-logo.gif" title="Logo" />
+                        Inter-university Consortium for Political and Social Research
+                        <ExtLink URI="http://www.icpsr.umich.edu/" title="URL" />
+                    </distrbtr>
+                    <distDate date="2015-04-16">2015-04-16</distDate>
+                </distStmt>
+                <verStmt>
+                    <version date="2015-04-16">2015-04-16</version>
+                </verStmt>
+                <biblCit>McArdle, John, Willard Rodgers, and Robert Willis. Cognition and Aging in the USA (CogUSA) 2007-2009. ICPSR36053-v1. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2015-04-16. http://doi.org/10.3886/ICPSR36053.v1</biblCit>
+            </citation>
+            <stdyInfo>
+                    <subject>
+                        <keyword vocab="thesaurus">aging</keyword>
+                        <keyword vocab="thesaurus">aging population</keyword>
+                        <keyword vocab="thesaurus">cognitive functioning</keyword>
+                        <keyword vocab="thesaurus">cognitive impairment</keyword>
+                        <keyword vocab="thesaurus">economic behavior</keyword>
+                        <keyword vocab="thesaurus">health status</keyword>
+                        <keyword vocab="thesaurus">personality assessment</keyword>
+                        <topcClas source="archive" vocab="ICPSR subject classifications">ICPSR XVI.A. Social Indicators, United States</topcClas>
+                        <topcClas source="archive" vocab="NACDA subject classifications">NACDA I. Demographic Characteristics of Older Adults</topcClas>
+                        <topcClas source="archive" vocab="NACDA subject classifications">NACDA II. Social Characteristics of Older Adults</topcClas>
+                        <topcClas source="archive" vocab="NACDA subject classifications">NACDA IV. Psychological Characteristics, Mental Health, and Well-Being of Older Adults</topcClas>
+                    </subject>
+                    <abstract>Cognition and Aging in the USA (CogUSA) is a national longitudinal study of cognition, focused on the age-related changes in cognition across cohorts and on the impact of cognition on key health and economic outcomes. The aim of the CogUSA Study was to evaluate the effectiveness of a variety of tests in assessing cognitive skills on a sample mirroring the Health and Retirement Survey (HRS) (ICPSR 6854). Data were derived in three waves, with each wave utilizing a variety of measures. In Waves 1 and 3, these measures included an adaptive number series test. The Woodcock-Johnson (WJ-III) number series test and the Wechsler Abbreviated Scale of Intelligence (WASI) were used in Wave 2. Waves 1 and 3 were conducted as telephone interviews, while Wave 2 was conducted as an in-person interview. This collection includes indicators of cognitive abilities and functioning as well as a variety of demographic, health, and economic variables.
+Dataset 1 presents participant demographic information, and Dataset 2 presents scores calculated for the cognitive tests administered to the respondents in each of the three waves.</abstract>
+                    <abstract>The goals of CogUSA were: (1) to develop efficient
+methods of assessing well-recognized components of intelligence and personality that can be administered by surveys using either face-to-face or telephone administration; and (2) to collect multivariate information to better understand how various cognitive abilities change with age.</abstract>
+                    <abstract>The CogUSA Study consists of three survey components. Initial contact was established by telephone calls to selected households, and the study began with a 40-minute telephone interview (Wave 1) that replicated the sections of the HRS questionnaire on demography, health and cognition, and added a few brief cognitive tests. This Wave 1 telephone survey was followed as quickly as possible - ideally, within a week - by a 3 hour face-to-face cognitive assessment (Wave 2) of the cognitive abilities of respondents on a large number of different tasks measuring components of "fluid and crystallized intelligence" (after Horn and McArdle, 2007). Respondents were paid $20 for participation in the Wave 1 interview and $60 for the longer Wave 2 interview. Data collection for Wave 1 took
+place between May and December, 2007. A second telephone survey (Wave 3) took place at a randomized interval of 1 to 24 months following the personal interview (following the Timelag strategy of McArdle and Woodcock, 1997). Randomizations for the Wave 3 telephone interview were done at the respondent, not household, level. Respondents were randomly assigned to one of eight follow-up target dates. Wave 3 telephone interviews began in February, 2008 and continued through September, 2009.</abstract>
+                    <sumDscr>
+                        <timePrd event="start" date="2007" cycle="P1"> </timePrd>
+                        <timePrd event="end"   date="2009" cycle="P1"> </timePrd>
+                        <collDate event="start" date="2007-05" cycle="P1"> </collDate>
+                        <collDate event="end"   date="2007-12" cycle="P1"> </collDate>
+                        <collDate event="start" date="2007-06" cycle="P2"> </collDate>
+                        <collDate event="end"   date="2008-01" cycle="P2"> </collDate>
+                        <collDate event="start" date="2008-02" cycle="P3"> </collDate>
+                        <collDate event="end"   date="2009-09" cycle="P3"> </collDate>
+                        <nation>Please see geographic coverage.</nation>
+                        <geogCover>United States</geogCover>
+                        <geogUnit>Census Region</geogUnit>
+                        <anlyUnit>Individual</anlyUnit>
+                        <universe>Individuals living in the United States, born in 1956 or earlier and their significant others, regardless of age.</universe>
+                        <dataKind>survey data</dataKind>
+                    </sumDscr>
+            </stdyInfo>
+            <method>
+                <dataColl>
+                    <sampProc>The study employs a two-stage RDD sample supplemented with information from a Genesys database to target a sample of households with individuals located in 28 primary sampling units (PSUs) across the nation. Eligible sample members included individuals born in 1956 or earlier and their significant others, regardless of age.</sampProc>
+                    <collMode>cognitive assessment test</collMode>
+                    <collMode>face-to-face interview</collMode>
+                    <collMode>telephone interview</collMode>
+                    <weight>The data are not weighted. However, Dataset 1 includes the weight variable COGWT, which is a respondent-level sample weight based on Wave 2. For more information on weights, please refer to the document entitled "Original P.I. Documentation."</weight>
+                    <cleanOps>Checked for undocumented or out-of-range codes.</cleanOps>
+                </dataColl>
+                <notes>This study is closely related to the Health and Retirement Study (HRS) (ICPSR 6854). Please refer to the file entitled "Original P.I. Documentation" for more details.</notes>
+                <notes>The two datasets in this collection can be linked using the
+variable SAMPID.</notes>
+                <anlyInfo>
+                    <respRate>47 percent; for more information on response rates across the three waves, please refer to the document entitled "Original P.I. Documentation."</respRate>
+                    <dataAppr>Woodcock-Johnson III (WJ-III; Woodcock, McGrew, and Mather, 2001; Woodcock and Mather, 2001)
+Wechsler Abbreviated Scale of Intelligence (WASI; Wechsler, 1999)
+Big Five Inventory (BFI; John and Srivastava, 1999)</dataAppr>
+                </anlyInfo>
+            </method>
+            <dataAccs>
+                <setAvail media="online">
+                    <accsPlac URI="http://www.icpsr.umich.edu">Ann Arbor, Mi.:  Inter-university Consortium for Political and Social Research</accsPlac>
+                    <notes>Stata system file(s), rda Data file(s), sav Data file(s), stc Data file(s), tsv Data file(s), Data file(s), and electronic documentation.</notes>
+                </setAvail>
+                <useStmt>
+                    <specPerm>Additional special permissions, where applicable, are described in the restrictions field.</specPerm>
+
+		<conditions>
+		    <![CDATA[
+		    <p>Please read the terms of use below. If you agree to them, click on the "I Agree" button to proceed. If you do not agree, you can click on the "I Do Not Agree" button to return to the home page.</p> <p>ICPSR adheres to the principles of the <a href="http://www.datasealofapproval.org/">Data Seal of Approval</a>, which, in part, require the data consumer to comply with access regulations imposed both by law and by the data repository, and to conform to codes of conduct that are generally accepted in higher education and scientific research for the exchange of knowledge and information. </p> <p>These data are distributed under the following terms of use, which are governed by ICPSR. By continuing past this point to the data retrieval process, you signify your agreement to comply with the requirements stated below:</p> <h2>Privacy of RESEARCH SUBJECTS</h2> <p>Any intentional identification of a RESEARCH SUBJECT (whether an individual or an organization) or unauthorized disclosure of his or her confidential information violates the PROMISE OF CONFIDENTIALITY given to the providers of the information. Therefore, users of data agree:</p> <ul> <li><p>To use these datasets solely for research or statistical purposes and not for investigation of specific RESEARCH SUBJECTS, except when identification is authorized in writing by ICPSR (<a href="mailto:netmail@icpsr.umich.edu">netmail@icpsr.umich.edu</a> )</p></li> <li><p>To make no use of the identity of any RESEARCH SUBJECT discovered inadvertently, and to advise ICPSR of any such discovery (<a href="mailto:netmail@icpsr.umich.edu">netmail@icpsr.umich.edu</a> )</p></li> </ul> <h2>Redistribution of Data</h2> <p>You agree not to redistribute data or other materials without the written agreement of ICPSR, unless: </p> <ol> <li><p>You serve as the OFFICIAL or DESIGNATED REPRESENTATIVE at an ICPSR MEMBER INSTITUTION and are assisting AUTHORIZED USERS with obtaining data, or</p></li> <li><p>You are collaborating with other AUTHORIZED USERS to analyze the data for research or instructional purposes.</p></li> </ol> <p>When sharing data or other materials in these approved ways, you must include all accompanying files with the data, including terms of use. More information on <a href="http://www.icpsr.umich.edu/icpsrweb/content/datamanagement/policies/redistribute.html"> permission to redistribute data</a> can be found on the ICPSR Web site.</p>
+
+
+<h2>Citing Data</h2> <p>You agree to reference the recommended bibliographic citation in any publication that employs resources provided by ICPSR. Authors of publications based on ICPSR data are required to send citations of their published works to ICPSR for inclusion in a database of related publications (<a href="mailto:bibliography@icpsr.umich.edu">bibliography@icpsr.umich.edu</a>) .</p> <h2>Disclaimer</h2> <p>You acknowledge that the original collector of the data, ICPSR, and the relevant funding agency bear no responsibility for use of the data or for interpretations or inferences based upon such uses.</p> <h2>Violations</h2> <p>If ICPSR determines that the terms of this agreement have been violated, ICPSR will act according to our <a href="http://www.icpsr.umich.edu/ICPSR/support/faqs/2008/10/what-are-consequences-of-violating">policy on terms of use violations</a>. Sanctions can include:</p> <ul> <li><p>ICPSR may revoke the existing agreement, demand the return of the data in question, and deny all future access to ICPSR data.</p></li> <li><p>The violation may be reported to the Research Integrity Officer, Institutional Review Board, or Human Subjects Review Committee of the user's institution. A range of sanctions are available to institutions including revocation of tenure and termination.</p></li> <li><p>If the confidentiality of human subjects has been violated, the case may be reported to the Federal Office for Human Research Protections. This may result in an investigation of the user's institution, which can result in institution-wide sanctions including the suspension of all research grants. </p></li> <li><p>A court may award the payment of damages to any individual(s)/organization(s) harmed by the breach of the agreement.</p></li> </ul> <h2>Definitions</h2> <dl> <dt>authorized user</dt> <dd>A faculty member, staff member, or student at a member institution</dd> <dt>ICPSR</dt> <dd>Inter-university Consortium for Political and Social Research</dd> <dt>member institution</dt> <dd>An institutional member of ICPSR</dd> <dt>Official/Designated Representative</dt> <dd>An individual appointed to represent a university's interests in ICPSR. This individual is also charged with providing user support to campus users. </dd> <dt>promise of confidentiality</dt> <dd>A promise to a respondent or research participant that the information the respondent provides will not be disseminated without the permission of the respondent; that the fact that the respondent participated in the study will not be disclosed; and that disseminated information will include no linkages to the identity of the respondent. Such a promise encompasses traditional notions of both confidentiality and anonymity. Names and other identifying information regarding respondents, proxies, or other persons on whom the respondent or proxy provides information, are presumed to be confidential.</dd> <dt>research subject</dt> <dd>A person or organization observed for purposes of research. Also called a respondent. A respondent is generally a survey respondent or informant, experimental or observational subject, focus group participant, or any other person providing information to a study or on whose behalf a proxy provides information. </dd> </dl>
+		    ]]>
+		    <p>AVAILABLE.  This study is freely available to the general public.</p>
+		</conditions>
+
+		<disclaimer>The original collector of the data, ICPSR,
+		and the relevant funding agency bear no responsibility
+		for use of the data or for interpretations or inferences
+		based upon such uses.  </disclaimer>
+                    </useStmt>
+            </dataAccs>
+        </stdyDscr>
+        <fileDscr ID="F1">
+            <fileTxt ID="Part1">
+                <fileName>Demographic Data</fileName>
+                <fileType>ASCII ASCSAS ASCSPSS ASCSTATA DELIMITED DOC RDATA SAS SPSS STATA</fileType>
+            </fileTxt>
+            <notes>4841</notes>
+        </fileDscr>
+        <fileDscr ID="F2">
+            <fileTxt ID="Part2">
+                <fileName>Test Score Data</fileName>
+                <fileType>ASCII ASCSAS ASCSPSS ASCSTATA DELIMITED DOC RDATA SAS SPSS STATA</fileType>
+            </fileTxt>
+            <notes>10733</notes>
+        </fileDscr>
+    </codeBook>
