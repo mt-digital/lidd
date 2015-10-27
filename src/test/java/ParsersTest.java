@@ -21,6 +21,29 @@ import org.joda.time.DateTime;
 public class ParsersTest
 {
     @Test
+    public void testDDIDateParser() throws Exception
+    {
+        String yearDate = "1990";
+        String isoDate = "2001-11-01";
+        String badDate = "2012-15-30"; 
+
+        assertEquals(new DateTime(1990, 1, 1, 0, 0),
+            Parsers.parseDdiDate(yearDate, "start"));
+
+        assertEquals(new DateTime(1990, 12, 31, 23, 59),
+            Parsers.parseDdiDate(yearDate, "end"));
+
+        assertEquals(new DateTime(2001, 11, 1, 0, 0),
+            Parsers.parseDdiDate(isoDate, "start"));
+
+        assertEquals(new DateTime(2001, 11, 1, 23, 59),
+            Parsers.parseDdiDate(isoDate, "end"));
+
+        // TODO
+        // Test (needs implementation) of handling bad datetimes
+    }
+
+    @Test
     public void testDDIParser() throws IOException
     {
         // path from root project dir
@@ -32,15 +55,16 @@ public class ParsersTest
         );
 
         NormalizedMetadata expectedNm00010 = new NormalizedMetadata(
-                "Voter Turnout in the United States: A Data-Driven Learning Guide",
-                new String[] {"United States Department of Commerce. Bureau of the Census"},
-                raw00010,
-                new DateTime(1984, 6, 20, 0, 0),
-                new DateTime(1992, 2, 16, 0, 0)
+            "United States Congressional District Data Books, 1961-1965",
+            new String[] 
+                {"United States Department of Commerce. Bureau of the Census"},
+            raw00010,
+            new DateTime(1961, 1, 1, 0, 0),
+            new DateTime(1965, 12, 31, 23, 59)
         );
 
-        NormalizedMetadata generatedNm00010 = Parsers.ddi(path00010.toFile());
-        
+        NormalizedMetadata generatedNm00010 = Parsers.ddi(path00010);
+
         assertTrue(generatedNm00010.equals(expectedNm00010));
     }
 }

@@ -43,7 +43,7 @@ public class Application implements CommandLineRunner {
     private static String[] standards = {"ddi", "eml"};
 
     @Override
-    public void run(String[] args) throws Exception {
+    public void run(String[] args) throws IOException, Exception {
 
         // parse arguments: which or all standards; where are they stored?
         String standard = args[0];
@@ -72,14 +72,18 @@ public class Application implements CommandLineRunner {
                 {
                     if (f.toString().contains("xml"))
                     {
-                        NormalizedMetadata nm = Parsers.ddi(f.toFile());
-
-                        repository.save(nm);
+                        try {
+                            NormalizedMetadata nm = Parsers.ddi(f);
+                            repository.save(nm);
+                        }
+                        catch (IOException e) {
+                            //
+                        }
                     }
                 }
             );
         }
-        catch (Exception e) 
+        catch (IOException e) 
         {
             e.printStackTrace();
         }
