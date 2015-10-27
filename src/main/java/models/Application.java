@@ -72,7 +72,7 @@ public class Application implements CommandLineRunner {
                 {
                     if (f.toString().contains("xml"))
                     {
-                        NormalizedMetadata nm = Parsers.ddi(f);
+                        NormalizedMetadata nm = Parsers.ddi(f.toFile());
 
                         repository.save(nm);
                     }
@@ -128,7 +128,6 @@ public class Application implements CommandLineRunner {
             "yo mama", 
             new String[] {"Henry IV", "Lupe", "Muffin"},
             "<xml>yeah!</xml",
-            "x0xxdfj114",
             new DateTime(1982, 4, 27, 14, 22),
             new DateTime(1986, 3, 25, 19, 17)
             )
@@ -138,7 +137,6 @@ public class Application implements CommandLineRunner {
             "mama", 
             new String[] {"Henry IV", "Lupe", "Muffin"},
             "<xml>yeah!</xml",
-            "x0xxdfj114",
             new DateTime(1982, 4, 27, 14, 22),
             new DateTime(1986, 3, 25, 19, 17)
             )
@@ -148,7 +146,6 @@ public class Application implements CommandLineRunner {
             "hoochie", 
             new String[] {"Giorno", "Muffin"},
             "<xml>ohh yeah!</xml",
-            "x0xdfj1",
             new DateTime(1982, 4, 27, 14, 22),
             new DateTime(1986, 3, 25, 19, 17)
             )

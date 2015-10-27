@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE codeBook
+SYSTEM "http://www.icpsr.umich.edu/files/DDI/Version2-1.dtd">
+    <codeBook>
+        <docDscr>
+            <citation>
+                <titlStmt>
+                    <titl>United States Congressional District Data Books, 1961-1965</titl>
+                    <IDNo>10</IDNo>
+                </titlStmt>
+                <prodStmt>
+                    <producer abbr="ICPSR">
+                        <ExtLink URI="http://www.icpsr.umich.edu/images/icpsr-logo.gif" title="ICPSR Logo" role="image"/>
+                        Inter-university Consortium for Political and Social Research
+                        <ExtLink URI="http://www.icpsr.umich.edu/" title="URL of ICPSR Web Site" />
+                    </producer>
+                </prodStmt>
+                <verStmt>
+                    <version date="2014-07-03"></version>
+                </verStmt>
+                <holdings URI="http://www.icpsr.umich.edu/xmldocs/STUDY/00010.xml"></holdings>
+            </citation>
+        </docDscr>
+        <stdyDscr>
+            <citation>
+                <titlStmt>
+                    <titl>United States Congressional District Data Books, 1961-1965</titl>
+                    <IDNo agency="ICPSR">10</IDNo>
+                </titlStmt>
+                <rspStmt>
+                    <AuthEnty affiliation="United States Department of Commerce. Bureau of the Census">United States Department of Commerce. Bureau of the Census</AuthEnty>
+                </rspStmt>
+                <prodStmt>
+                    <prodDate>Please see full citation.</prodDate>
+                </prodStmt>
+                <distStmt>
+                    <distrbtr abbr="ICPSR" affiliation="Institute for Social Research, University of Michigan" URI="http://www.icpsr.umich.edu">
+                        <ExtLink URI="http://www.icpsr.umich.edu/images/icpsr-logo.gif" title="Logo" />
+                        Inter-university Consortium for Political and Social Research
+                        <ExtLink URI="http://www.icpsr.umich.edu/" title="URL" />
+                    </distrbtr>
+                    <distDate date="1984-06-20">1984-06-20</distDate>
+                </distStmt>
+                <verStmt>
+                    <version date="1992-02-16">1992-02-16</version>
+                </verStmt>
+                <biblCit>United States Department of Commerce. Bureau of the Census. United States Congressional District Data Books, 1961-1965. ICPSR00010-v1. Ann Arbor, MI: Inter-university Consortium for Political and Social Research  [distributor], 196?. http://doi.org/10.3886/ICPSR00010.v1</biblCit>
+                <notes>LRECL with SAS and SPSS data definition statements</notes>
+            </citation>
+            <stdyInfo>
+                    <subject>
+                        <keyword vocab="thesaurus">census data</keyword>
+                        <keyword vocab="thesaurus">congressional districts</keyword>
+                        <keyword vocab="thesaurus">congressional elections</keyword>
+                        <keyword vocab="thesaurus">demographic characteristics</keyword>
+                        <keyword vocab="thesaurus">election returns</keyword>
+                        <keyword vocab="thesaurus">political attitudes</keyword>
+                        <keyword vocab="thesaurus">political parties</keyword>
+                        <keyword vocab="thesaurus">population characteristics</keyword>
+                        <keyword vocab="thesaurus">vote count</keyword>
+                        <keyword vocab="thesaurus">voter attitudes</keyword>
+                        <keyword vocab="thesaurus">voting behavior</keyword>
+                        <topcClas source="archive" vocab="ICPSR subject classifications">ICPSR XIV.A.4.a. Mass Political Behavior and Attitudes, Historical and Contemporary Electoral Processes, Merged Electoral and Ecological Data, United States</topcClas>
+                    </subject>
+                    <abstract>This study contains selected electoral and aggregate 
+ economic, ecological, and demographic data at the congressional
+ district level for districts of the 87th and 88th Congresses
+ in the period 1961-1965. Data are provided for the number of
+ votes cast for the Democratic and the Republican parties, and  
+ the percentage of votes cast for the majority party in the 
+ biennial elections for United States Representatives in 
+ the period 1952-1962, as well as the total votes cast for 
+ the office of president, and the number of votes cast for 
+ each party's presidential candidate in the 1952, 1956, and 
+ 1960 election. Data are also provided for population 
+ and housing characteristics, including total population by 
+ household, group quarters, institutions, age group, gender, 
+ marital status, race, nationality, and urban and rural 
+ residency. Additional demographic variables describe the 
+ congressional districts in terms of education, income, 
+ employment status and occupation, veteran status, births, 
+deaths, and marriages.</abstract>
+                    <sumDscr>
+                        <timePrd event="start" date="1961" cycle="P1"> </timePrd>
+                        <timePrd event="end"   date="1965" cycle="P1"> </timePrd>
+                        <nation>Please see geographic coverage.</nation>
+                        <geogCover>United States</geogCover>
+                        <universe>United States 87th and 88th congressional districts in 
+the period 1961-1965.</universe>
+                        <dataKind>census data, and aggregate data</dataKind>
+                    </sumDscr>
+            </stdyInfo>
+            <method>
+                <dataColl>
+                    <sources>
+                        <dataSrc>(1) United States Department of Commerce. Bureau of 
+ the Census, and (2) Inter-university Consortium for Political and 
+Social Research (ICPSR) electoral returns data</dataSrc>
+                    </sources>
+                    <cleanOps>Checked for undocumented or out-of-range codes.</cleanOps>
+                </dataColl>
+                <notes>See also the related data collection, UNITED STATES
+ CONGRESSIONAL DISTRICT DATA BOOK FOR THE NINETY-THIRD CONGRESS, 1973 
+(ICPSR 0011)</notes>
+            </method>
+            <dataAccs>
+                <setAvail media="online">
+                    <accsPlac URI="http://www.icpsr.umich.edu">Ann Arbor, Mi.:  Inter-university Consortium for Political and Social Research</accsPlac>
+                    <notes>Data file(s), and electronic documentation.</notes>
+                </setAvail>
+                <useStmt>
+                    <specPerm>Additional special permissions, where applicable, are described in the restrictions field.</specPerm>
+
+		<conditions>
+		    <![CDATA[
+		    <p>Please read the terms of use below. If you agree to them, click on the "I Agree" button to proceed. If you do not agree, you can click on the "I Do Not Agree" button to return to the home page.</p> <p>ICPSR adheres to the principles of the <a href="http://www.datasealofapproval.org/">Data Seal of Approval</a>, which, in part, require the data consumer to comply with access regulations imposed both by law and by the data repository, and to conform to codes of conduct that are generally accepted in higher education and scientific research for the exchange of knowledge and information. </p> <p>These data are distributed under the following terms of use, which are governed by ICPSR. By continuing past this point to the data retrieval process, you signify your agreement to comply with the requirements stated below:</p> <h2>Privacy of RESEARCH SUBJECTS</h2> <p>Any intentional identification of a RESEARCH SUBJECT (whether an individual or an organization) or unauthorized disclosure of his or her confidential information violates the PROMISE OF CONFIDENTIALITY given to the providers of the information. Therefore, users of data agree:</p> <ul> <li><p>To use these datasets solely for research or statistical purposes and not for investigation of specific RESEARCH SUBJECTS, except when identification is authorized in writing by ICPSR (<a href="mailto:netmail@icpsr.umich.edu">netmail@icpsr.umich.edu</a> )</p></li> <li><p>To make no use of the identity of any RESEARCH SUBJECT discovered inadvertently, and to advise ICPSR of any such discovery (<a href="mailto:netmail@icpsr.umich.edu">netmail@icpsr.umich.edu</a> )</p></li> </ul> <h2>Redistribution of Data</h2> <p>You agree not to redistribute data or other materials without the written agreement of ICPSR, unless: </p> <ol> <li><p>You serve as the OFFICIAL or DESIGNATED REPRESENTATIVE at an ICPSR MEMBER INSTITUTION and are assisting AUTHORIZED USERS with obtaining data, or</p></li> <li><p>You are collaborating with other AUTHORIZED USERS to analyze the data for research or instructional purposes.</p></li> </ol> <p>When sharing data or other materials in these approved ways, you must include all accompanying files with the data, including terms of use. More information on <a href="http://www.icpsr.umich.edu/icpsrweb/content/datamanagement/policies/redistribute.html"> permission to redistribute data</a> can be found on the ICPSR Web site.</p>
+
+
+<h2>Citing Data</h2> <p>You agree to reference the recommended bibliographic citation in any publication that employs resources provided by ICPSR. Authors of publications based on ICPSR data are required to send citations of their published works to ICPSR for inclusion in a database of related publications (<a href="mailto:bibliography@icpsr.umich.edu">bibliography@icpsr.umich.edu</a>) .</p> <h2>Disclaimer</h2> <p>You acknowledge that the original collector of the data, ICPSR, and the relevant funding agency bear no responsibility for use of the data or for interpretations or inferences based upon such uses.</p> <h2>Violations</h2> <p>If ICPSR determines that the terms of this agreement have been violated, ICPSR will act according to our <a href="http://www.icpsr.umich.edu/ICPSR/support/faqs/2008/10/what-are-consequences-of-violating">policy on terms of use violations</a>. Sanctions can include:</p> <ul> <li><p>ICPSR may revoke the existing agreement, demand the return of the data in question, and deny all future access to ICPSR data.</p></li> <li><p>The violation may be reported to the Research Integrity Officer, Institutional Review Board, or Human Subjects Review Committee of the user's institution. A range of sanctions are available to institutions including revocation of tenure and termination.</p></li> <li><p>If the confidentiality of human subjects has been violated, the case may be reported to the Federal Office for Human Research Protections. This may result in an investigation of the user's institution, which can result in institution-wide sanctions including the suspension of all research grants. </p></li> <li><p>A court may award the payment of damages to any individual(s)/organization(s) harmed by the breach of the agreement.</p></li> </ul> <h2>Definitions</h2> <dl> <dt>authorized user</dt> <dd>A faculty member, staff member, or student at a member institution</dd> <dt>ICPSR</dt> <dd>Inter-university Consortium for Political and Social Research</dd> <dt>member institution</dt> <dd>An institutional member of ICPSR</dd> <dt>Official/Designated Representative</dt> <dd>An individual appointed to represent a university's interests in ICPSR. This individual is also charged with providing user support to campus users. </dd> <dt>promise of confidentiality</dt> <dd>A promise to a respondent or research participant that the information the respondent provides will not be disseminated without the permission of the respondent; that the fact that the respondent participated in the study will not be disclosed; and that disseminated information will include no linkages to the identity of the respondent. Such a promise encompasses traditional notions of both confidentiality and anonymity. Names and other identifying information regarding respondents, proxies, or other persons on whom the respondent or proxy provides information, are presumed to be confidential.</dd> <dt>research subject</dt> <dd>A person or organization observed for purposes of research. Also called a respondent. A respondent is generally a survey respondent or informant, experimental or observational subject, focus group participant, or any other person providing information to a study or on whose behalf a proxy provides information. </dd> </dl>
+		    ]]>
+		    <p>AVAILABLE.  This study is freely available to ICPSR member institutions.</p>
+		</conditions>
+
+		<disclaimer>The original collector of the data, ICPSR,
+		and the relevant funding agency bear no responsibility
+		for use of the data or for interpretations or inferences
+		based upon such uses.  </disclaimer>
+                    </useStmt>
+            </dataAccs>
+        </stdyDscr>
+        <fileDscr ID="F1">
+            <fileTxt ID="Part1">
+                <fileName>87th Congress</fileName>
+                <fileType>ASCII ASCSAS ASCSPSS</fileType>
+            </fileTxt>
+            <notes>370</notes>
+        </fileDscr>
+        <fileDscr ID="F2">
+            <fileTxt ID="Part2">
+                <fileName>88th Congress</fileName>
+                <fileType>ASCII ASCSAS ASCSPSS</fileType>
+            </fileTxt>
+            <notes>1017</notes>
+        </fileDscr>
+    </codeBook>

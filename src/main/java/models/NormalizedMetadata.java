@@ -23,8 +23,6 @@ public class NormalizedMetadata
 
     private String raw;
 
-    private String identifier;
-
     @Indexed
     private DateTime startDateTime;
 
@@ -36,26 +34,36 @@ public class NormalizedMetadata
     public NormalizedMetadata(String title, 
                               String[] authors, 
                               String raw, 
-                              String identifier,
                               DateTime startDateTime,
                               DateTime endDateTime)
     {
         this.title = title;
         this.authors = authors;
         this.raw = raw;
-        this.identifier = identifier;
         this.startDateTime = startDateTime;
         this.endDateTime = endDateTime;
     }
 
+    public boolean equals(NormalizedMetadata other)
+    {
+        boolean ret = (
+            other.title.equals(this.title) &&
+            Arrays.equals(other.authors, this.authors) &&  // ok; 1D array
+            other.raw.equals(this.raw) &&
+            other.startDateTime.equals(this.startDateTime) &&
+            other.endDateTime.equals(this.endDateTime)
+        );
+
+        return ret;
+    }
 
     @Override
     public String toString() 
     {
         return String.format(
            "NormalizedMetadata:\n\t" +
-               "%s\n\t%s\n\t%s\n\t%s\n\t%s",
-           title, Arrays.toString(authors), identifier, 
+               "%s\n\t%s\n\t%s\n\t%s",
+           title, Arrays.toString(authors),
            startDateTime.toString(), endDateTime.toString()
        );
     }
