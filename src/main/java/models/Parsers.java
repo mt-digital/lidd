@@ -238,6 +238,7 @@ public class Parsers
             // filter into start and end elements by attribute
             Elements startElems = timePrdElems.select("[event=start]");
             Elements endElems = timePrdElems.select("[event=end]");
+            Elements singleElems = timePrdElems.select("[event=single]");
 
             // if n start or n end > 1, put into list, sort ascending, take 
             // first and last as start and end
@@ -248,51 +249,64 @@ public class Parsers
                     parseDdiDate(endElems.last().attr("date"), "end")
                 );
             }
+            else if (singleElems.size() == 1)
+            {
+                String dateStr = singleElems.first().attr("date");
+
+                ret = new DateTimeCoverage(
+                    parseDdiDate(dateStr, "start"),
+                    parseDdiDate(dateStr, "end")
+                );
+            }
             else
             {
                 Elements fullList = new Elements();
                 
                 fullList.addAll(startElems);
                 fullList.addAll(endElems);
+                fullList.addAll(singleElems);
 
-                List<DateTime> dts = new ArrayList<DateTime>();
-                for (Element el : startElems)
+                if (fullList.size() > 0)  // if no els found, default return
                 {
-                    dts.add(parseDdiDate(el.attr("date"), "start"));
-                }
-                for (Element el : endElems)
-                {
-                    dts.add(parseDdiDate(el.attr("date"), "end"));
-                }
-
-                DateTime start = new DateTime(2000, 1, 1, 0, 0);
-                DateTime end = new DateTime(2000, 1, 1, 0, 0);
-
-                int i = 0;
-                for (DateTime dt : dts)
-                {
-                    if (i++ == 0)
+                    List<DateTime> dts = new ArrayList<DateTime>();
+                    for (Element el : startElems)
                     {
-                        start = dt;
-                        end = dt;
+                        dts.add(parseDdiDate(el.attr("date"), "start"));
                     }
-                    else
+                    for (Element el : endElems)
                     {
-                        if (dt.isBefore(start))
+                        dts.add(parseDdiDate(el.attr("date"), "end"));
+                    }
+
+                    DateTime start = new DateTime(2000, 1, 1, 0, 0);
+                    DateTime end = new DateTime(2000, 1, 1, 0, 0);
+
+                    int i = 0;
+                    for (DateTime dt : dts)
+                    {
+                        if (i++ == 0)
                         {
                             start = dt;
-                        }
-                        else if (dt.isAfter(end))
-                        {
                             end = dt;
                         }
+                        else
+                        {
+                            if (dt.isBefore(start))
+                            {
+                                start = dt;
+                            }
+                            else if (dt.isAfter(end))
+                            {
+                                end = dt;
+                            }
 
-                        i++;
+                            i++;
+                        }
                     }
-                }
 
-                ret = 
-                    new DateTimeCoverage(dts.get(0), dts.get(dts.size() - 1));
+                    ret = 
+                        new DateTimeCoverage(dts.get(0), dts.get(dts.size() - 1));
+                }
             } 
         }
         catch (Exception e)  // TODO restrict to IllegalFieldValueException?

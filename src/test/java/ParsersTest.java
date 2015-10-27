@@ -78,25 +78,67 @@ public class ParsersTest
         /*
          * 13233.xml has <timePrd event="single" date="2000" cycle="P1"></timePrd>
          */ 
-        // path from root project dir
-        //Path path13233 = Paths.get("data/test/13233.xml");
+        Path path13233 = Paths.get("data/test/13233.xml");
 
-        //// kind of cheating since it's exactly what the parser does
-        //String raw13233 = new String(
-            //Files.readAllBytes(path13233)
-        //);
+        String raw13233 = new String(
+            Files.readAllBytes(path13233)
+        );
 
-        //NormalizedMetadata expectedNm13233 = new NormalizedMetadata(
-            //"United States Congressional District Data Books, 1961-1965",
-            //new String[] 
-                //{"United States Department of Commerce. Bureau of the Census"},
-            //raw13233,
-            //new DateTime(2000, 1, 1, 0, 0),
-            //new DateTime(, 12, 31, 23, 59)
-        //);
+        NormalizedMetadata expectedNm13233 = new NormalizedMetadata(
+            "Census of Population and Housing, 2000 [United States]: Summary File 2, Alabama",
+            new String[] 
+                {"United States Department of Commerce. Bureau of the Census"},
+            raw13233,
+            new DateTime(2000, 1, 1, 0, 0),
+            new DateTime(2000, 12, 31, 23, 59)
+        );
 
-        //NormalizedMetadata generatedNm13233 = Parsers.ddi(path13233);
+        NormalizedMetadata generatedNm13233 = Parsers.ddi(path13233);
 
-        //assertTrue(generatedNm13233.equals(expectedNm13233));
+        assertTrue(generatedNm13233.equals(expectedNm13233));
+
+        /*
+         * 09248.xml has shorter time period with full iso
+         */
+        Path path09248 = Paths.get("data/test/09248.xml");
+
+        String raw09248 = new String(
+            Files.readAllBytes(path09248)
+        );
+
+        NormalizedMetadata expectedNm09248 = new NormalizedMetadata(
+            "ABC News West Germany Poll, May 1989",
+            new String[] 
+                {"ABC News"},
+            raw09248,
+            new DateTime(1989, 5, 12, 0, 0),
+            new DateTime(1989, 5, 22, 23, 59)
+        );
+
+        NormalizedMetadata generatedNm09248 = Parsers.ddi(path09248);
+
+        assertTrue(generatedNm09248.equals(expectedNm09248));
+
+        /*
+         * 36053.xml has three authors
+         */
+        Path path36053 = Paths.get("data/test/36053.xml");
+
+        String raw36053 = new String(
+            Files.readAllBytes(path36053)
+        );
+
+        NormalizedMetadata expectedNm36053 = new NormalizedMetadata(
+            "Cognition and Aging in the USA (CogUSA) 2007-2009",
+            new String[] 
+                {"McArdle, John", "Rodgers, Willard", "Willis, Robert"},
+            raw36053,
+            new DateTime(2007, 1, 1, 0, 0),
+            new DateTime(2009, 12, 31, 23, 59)
+        );
+
+        NormalizedMetadata generatedNm36053 = Parsers.ddi(path36053);
+
+        assertTrue(generatedNm36053.equals(expectedNm36053));
     }
 }
