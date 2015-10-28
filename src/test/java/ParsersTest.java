@@ -51,6 +51,50 @@ public class ParsersTest
     }
 
     @Test
+    public void testEMLParser() throws Exception
+    {
+        /*
+         * eml1
+         */
+        Path pathEml1 = Paths.get("data/test/eml1.xml");
+
+        String rawEml1 = new String(Files.readAllBytes(pathEml1));
+
+        NormalizedMetadata expectedEml1 = new NormalizedMetadata(
+            "88dehltg.txt",
+            new String[]
+                {"PETERSON, B.J", "DEEGAN, L."},
+            rawEml1,
+            new DateTime(1988, 1, 1, 0, 0),
+            new DateTime(1988, 12, 31, 23, 59)
+        );
+
+        NormalizedMetadata generatedNmEml1 = Parsers.eml(pathEml1);
+
+        assertTrue(expectectedEml1.equals(generatedNmEml1));
+
+        /*
+         * eml2 
+         */
+        Path pathEml2 = Paths.get("data/test/eml2.xml");
+
+        String rawEml2 = new String(Files.readAllBytes(pathEml2));
+
+        NormalizedMetadata expectedEml2 = new NormalizedMetadata(
+            "88dehltg.txt",
+            new String[]
+                {"PETERSON, B.J", "DEEGAN, L."},
+            rawEml2,
+            new DateTime(1988, 1, 1, 0, 0),
+            new DateTime(1988, 12, 31, 23, 59)
+        );
+
+        NormalizedMetadata generatedNmEml2 = Parsers.eml(pathEml2);
+
+        assertTrue(expectectedEml2.equals(generatedNmEml2));
+    }
+
+    @Test
     public void testDDIParser() throws IOException
     {
         // path from root project dir

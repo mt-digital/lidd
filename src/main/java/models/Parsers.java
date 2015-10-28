@@ -31,6 +31,9 @@ public class Parsers
 {
     public Parsers () {};
 
+    /**
+     * 
+     */
     public static NormalizedMetadata ddi(Path ddiPath) throws IOException
     {
         File ddiFile = ddiPath.toFile();
@@ -62,6 +65,39 @@ public class Parsers
                                       );
     }
 
+    /**
+     *
+     */
+    public static NormalizedMetadata eml(Path emlPath) throws IOException
+    {
+        File emlFile = emlPath.toFile();
+
+        String raw = new String(Files.readAllBytes(emlPath));
+
+        Document doc = Jsoup.parse(emlFile, "UTF-8");
+
+        String title = emlTitle(doc);
+
+        List<AuthorAffiliation> authAffils = emlAuthorAffiliations(doc);
+
+        int i = 0;
+        String[] authors = new String[authAffils.size()];
+        for (AuthorAffiliation aa : authAffils)
+        {
+            authors[i++] = aa.author;
+        }
+
+        DateTimeCoverage dtCoverage = emlDateTimeCoverage(doc);
+
+        return new NormalizedMetadata(
+            "", 
+            new String[]{""}, 
+            raw, 
+            dtCoverage.start,
+            dtCoverage.end
+        );
+    }
+
     private static String ddiTitle(Document doc)
     {
         Elements titleElems = doc.getElementsByTag("titl");
@@ -70,6 +106,13 @@ public class Parsers
         String title = "";
 
         title = titleElems.first().text();
+
+        return title;
+    }
+
+    private static String emlTitle(Document doc)
+    {
+        String title = doc.select("dataset>title").text();
 
         return title;
     }
@@ -85,6 +128,34 @@ public class Parsers
         {
             authorAffiliations.add(
                 new AuthorAffiliation(el.text(), el.attr("affiliation")));
+        }
+
+        return authorAffiliations;
+    }
+
+    /**
+     * See https://goo.gl/TP84k9,  the docs for individualName, for more info 
+     * on <contact> field.
+     *
+     * To summarize, a <contact> may have <individualName>, <organizationName>,
+     * and <positionName>. If there is no <individualName> but there is a 
+     * <positionName> then anyone at that organization with that position can
+     * be considered a valid contact.
+     *
+     * Then for our AuthorAffiliation, if there is an <organizationName> but
+     * no <individualName>, set the author to be the organization. If there is
+     * an author but no organization, I'll set the organization to "None".
+     */
+    private static List<AuthorAffiliation> emlAuthorAffiliations(Document doc)
+    {
+        Elements creatorElems = doc.select("dataset>creator");
+
+        List<AuthorAffiliation> authorAffiliations = 
+            new LinkedList<AuthorAffiliation>();
+
+        for (Element el : creatorElems)
+        {
+            // logic here to implement comments outline
         }
 
         return authorAffiliations;
@@ -106,7 +177,7 @@ public class Parsers
     /**
      * No equivalent to Python Dateutil, so doing some manual string parsing
      */
-    public static DateTime parseDdiDate(String dateStr, String startOrEnd)
+    public static DateTime parseDate(String dateStr, String startOrEnd)
         throws IllegalFieldValueException, Exception
     {
         int year, month, day, hour, minute;
@@ -215,7 +286,7 @@ public class Parsers
      * <timePrd event="end"   date="1965" cycle="P1"> </timePrd>
      * 
      * So get the event attribute and date attribute, then pass to 
-     * parseDdiDate. There are some records with more than one start and and
+     * parseDate. There are some records with more than one start and and
      * date. If len of startDates or endDates > 1, put all dates in a list,
      * sort, and take the first and last as start and end.
      */
@@ -245,8 +316,8 @@ public class Parsers
             if (startElems.size() == 1 && endElems.size() == 1)
             {
                 ret = new DateTimeCoverage(
-                    parseDdiDate(startElems.first().attr("date"), "start"),
-                    parseDdiDate(endElems.last().attr("date"), "end")
+                    parseDate(startElems.first().attr("date"), "start"),
+                    parseDate(endElems.last().attr("date"), "end")
                 );
             }
             else if (singleElems.size() == 1)
@@ -254,8 +325,8 @@ public class Parsers
                 String dateStr = singleElems.first().attr("date");
 
                 ret = new DateTimeCoverage(
-                    parseDdiDate(dateStr, "start"),
-                    parseDdiDate(dateStr, "end")
+                    parseDate(dateStr, "start"),
+                    parseDate(dateStr, "end")
                 );
             }
             else
@@ -271,11 +342,11 @@ public class Parsers
                     List<DateTime> dts = new ArrayList<DateTime>();
                     for (Element el : startElems)
                     {
-                        dts.add(parseDdiDate(el.attr("date"), "start"));
+                        dts.add(parseDate(el.attr("date"), "start"));
                     }
                     for (Element el : endElems)
                     {
-                        dts.add(parseDdiDate(el.attr("date"), "end"));
+                        dts.add(parseDate(el.attr("date"), "end"));
                     }
 
                     DateTime start = new DateTime(2000, 1, 1, 0, 0);
