@@ -29,27 +29,31 @@ public class ParsersTest
         String badDate = "2012-15-30"; 
 
         assertEquals(new DateTime(1990, 1, 1, 0, 0),
-            Parsers.parseDdiDate(yearDate, "start"));
+            Parsers.parseDate(yearDate, "start"));
 
         assertEquals(new DateTime(1990, 12, 31, 23, 59),
-            Parsers.parseDdiDate(yearDate, "end"));
+            Parsers.parseDate(yearDate, "end"));
 
         assertEquals(new DateTime(1976, 11, 1, 0, 0),
-            Parsers.parseDdiDate(yearMoDate, "start"));
+            Parsers.parseDate(yearMoDate, "start"));
 
         assertEquals(new DateTime(1976, 11, 30, 23, 59),
-            Parsers.parseDdiDate(yearMoDate, "end"));
+            Parsers.parseDate(yearMoDate, "end"));
 
         assertEquals(new DateTime(2001, 11, 1, 0, 0),
-            Parsers.parseDdiDate(isoDate, "start"));
+            Parsers.parseDate(isoDate, "start"));
 
         assertEquals(new DateTime(2001, 11, 1, 23, 59),
-            Parsers.parseDdiDate(isoDate, "end"));
+            Parsers.parseDate(isoDate, "end"));
 
         // TODO
         // Test (needs implementation) of handling bad datetimes
     }
 
+
+    /**
+     * Check expected parsing functionality of EML parser.
+     */
     @Test
     public void testEMLParser() throws Exception
     {
@@ -63,15 +67,15 @@ public class ParsersTest
         NormalizedMetadata expectedEml1 = new NormalizedMetadata(
             "88dehltg.txt",
             new String[]
-                {"PETERSON, B.J", "DEEGAN, L."},
+                {"DEEGAN, L.", "PETERSON, B.J."},
             rawEml1,
             new DateTime(1988, 1, 1, 0, 0),
             new DateTime(1988, 12, 31, 23, 59)
         );
 
-        NormalizedMetadata generatedNmEml1 = Parsers.eml(pathEml1);
+        NormalizedMetadata generatedEml1 = Parsers.eml(pathEml1);
 
-        assertTrue(expectectedEml1.equals(generatedNmEml1));
+        assertTrue(expectedEml1.equals(generatedEml1));
 
         /*
          * eml2 
@@ -81,19 +85,24 @@ public class ParsersTest
         String rawEml2 = new String(Files.readAllBytes(pathEml2));
 
         NormalizedMetadata expectedEml2 = new NormalizedMetadata(
-            "88dehltg.txt",
+            "Fort Keogh site, station NWS COOP #245690, Miles City-Frank Wiley Field, MT, study of precipitation in units of centimeter on a monthly timescale",
             new String[]
-                {"PETERSON, B.J", "DEEGAN, L."},
+                {"National Climatic Data Center (NCDC)", "EcoTrends Project"},
             rawEml2,
-            new DateTime(1988, 1, 1, 0, 0),
-            new DateTime(1988, 12, 31, 23, 59)
+            new DateTime(1937, 1, 1, 0, 0),
+            new DateTime(2009, 9, 30, 23, 59)
         );
+
 
         NormalizedMetadata generatedNmEml2 = Parsers.eml(pathEml2);
 
-        assertTrue(expectectedEml2.equals(generatedNmEml2));
+        assertTrue(expectedEml2.equals(generatedNmEml2));
     }
 
+
+    /**
+     * Check expected parsing functionality of DDI parser.
+     */
     @Test
     public void testDDIParser() throws IOException
     {

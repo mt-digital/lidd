@@ -17,17 +17,17 @@ public class NormalizedMetadata
     private String id;
 
     @TextIndexed
-    private String title;
+    public String title;
 
-    private String[] authors;
+    public String[] authors;
 
-    private String raw;
-
-    @Indexed
-    private DateTime startDateTime;
+    public String raw;
 
     @Indexed
-    private DateTime endDateTime;
+    public DateTime startDateTime;
+
+    @Indexed
+    public DateTime endDateTime;
 
     public NormalizedMetadata() {};
 
