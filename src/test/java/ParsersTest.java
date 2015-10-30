@@ -57,48 +57,79 @@ public class ParsersTest
     @Test
     public void testEMLParser() throws Exception
     {
-        /*
-         * eml1
-         */
-        Path pathEml1 = Paths.get("data/test/eml1.xml");
+        String title;
+        String[] authors;
+        DateTime startDateTime, endDateTime;
+        
+        // eml1.xml
+        title = "88dehltg.txt";
+        authors = new String[] {"DEEGAN, L.", "PETERSON, B.J."};
+        startDateTime = new DateTime(1988, 1, 1, 0, 0);
+        endDateTime = new DateTime(1988, 12, 31, 23, 59);
 
-        String rawEml1 = new String(Files.readAllBytes(pathEml1));
+        emlTest("data/test/eml1.xml", title, authors, 
+                startDateTime, endDateTime);
 
-        NormalizedMetadata expectedEml1 = new NormalizedMetadata(
-            "88dehltg.txt",
-            new String[]
-                {"DEEGAN, L.", "PETERSON, B.J."},
-            rawEml1,
-            new DateTime(1988, 1, 1, 0, 0),
-            new DateTime(1988, 12, 31, 23, 59)
-        );
+        // eml2.xml
+        title = 
+            "Fort Keogh site, station NWS COOP #245690, " +
+            "Miles City-Frank Wiley Field, MT, study of precipitation in " + 
+            "units of centimeter on a monthly timescale";
+        authors = new String[] 
+            {"National Climatic Data Center (NCDC)", "EcoTrends Project"};
+        startDateTime = new DateTime(1937, 1, 1, 0, 0);
+        endDateTime = new DateTime(2009, 9, 30, 23, 59);
 
-        NormalizedMetadata generatedEml1 = Parsers.eml(pathEml1);
+        emlTest("data/test/eml2.xml", 
+            title, authors, startDateTime, endDateTime);
 
-        assertTrue(expectedEml1.equals(generatedEml1));
+        // eml3.xml
+        title = "Santa Rita Experimental Range site, station Santa Rita Experimental Range pastures where the mesquite were killed and the pastures were burned: pasture 2S, study of plant cover of Krameria parvifolia in units of percent on a yearly timescale";
+        authors = new String[] {"Santa Rita Experimental Range", 
+            "EcoTrends Project"};
+        startDateTime = new DateTime(1953, 1, 1, 0, 0);
+        endDateTime = new DateTime(2006, 12, 31, 23, 59);
 
-        /*
-         * eml2 
-         */
-        Path pathEml2 = Paths.get("data/test/eml2.xml");
+        emlTest("data/test/eml3.xml", 
+            title, authors, startDateTime, endDateTime);
 
-        String rawEml2 = new String(Files.readAllBytes(pathEml2));
-
-        NormalizedMetadata expectedEml2 = new NormalizedMetadata(
-            "Fort Keogh site, station NWS COOP #245690, Miles City-Frank Wiley Field, MT, study of precipitation in units of centimeter on a monthly timescale",
-            new String[]
-                {"National Climatic Data Center (NCDC)", "EcoTrends Project"},
-            rawEml2,
-            new DateTime(1937, 1, 1, 0, 0),
-            new DateTime(2009, 9, 30, 23, 59)
-        );
-
-
-        NormalizedMetadata generatedNmEml2 = Parsers.eml(pathEml2);
-
-        assertTrue(expectedEml2.equals(generatedNmEml2));
+        // eml4.xml
+        title = "Sevilleta site, station Rio Salado Grass Study Site, study of animal abundance of Rodentia in units of numberPerTrappingWeb on a yearly timescale";
+        authors = new String[] {"Friggens, Mike", "Sevilleta", 
+            "EcoTrends Project"};
+        startDateTime = new DateTime(1989, 1, 1, 0, 0);
+        endDateTime = new DateTime(1998, 12, 31, 23, 59);
+        
+        emlTest("data/test/eml4.xml",
+            title, authors, startDateTime, endDateTime);
     }
 
+
+    /**
+     * Function to test parsing for a given EML file.
+     */
+    private void emlTest(String testFile, String title, String[] authors,
+                         DateTime startDateTime, DateTime endDateTime)
+        throws IOException, Exception
+    {
+        Path path = Paths.get(testFile);
+
+        String raw = new String(Files.readAllBytes(path));
+        
+        NormalizedMetadata expectedNm = new NormalizedMetadata(
+            title, authors, raw, startDateTime, endDateTime
+        );
+
+        NormalizedMetadata generatedNm = Parsers.eml(path);
+
+        if (!expectedNm.equals(generatedNm))
+        {
+            System.out.println("\nExpected: " + expectedNm); 
+            System.out.println("\nGenerated: " + generatedNm); 
+        }
+
+        assertTrue(expectedNm.equals(generatedNm));
+    }
 
     /**
      * Check expected parsing functionality of DDI parser.

@@ -162,19 +162,29 @@ public class Parsers
             int nOrgs = orgElems.size();
             int nPositions = positionElems.size();
 
+            System.out.println("nIndividual: " + nIndividual);
+
             if (nIndividual == 1)
             {
                 // not for sure that surName and givenName
                 StringBuilder nameSb = new StringBuilder();
 
                 // use tmpElems for the query results for (sur/given)Name
+                Element individualEl = individualElems.first();
                 Elements tmpElems = new Elements();
                 for (String name : new String[] {"surName", "givenName"})
                 {
-                    tmpElems = individualElems.select("surName");
+                    tmpElems = individualEl.select(name);
                     if (tmpElems.size() == 1)
                     {
-                        nameSb.append(tmpElems.first().text());
+                        if (name == "givenName")
+                        {
+                            nameSb.append(", " + tmpElems.first().text());
+                        }
+                        else
+                        {
+                            nameSb.append(tmpElems.first().text());
+                        }
                     }
                 }
                 
