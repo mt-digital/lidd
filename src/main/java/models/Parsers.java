@@ -40,6 +40,8 @@ public class Parsers
 
         String raw = new String(Files.readAllBytes(ddiPath));
 
+        System.out.println(raw);
+
         Document doc = Jsoup.parse(ddiFile, "UTF-8");
         
         // get relevant fields from DDI metadata using private methods below
