@@ -1,4 +1,7 @@
-package models;
+package parsers;
+
+import models.MetadataStandard;
+import models.NormalizedMetadata;
 
 import java.lang.StringBuilder;
 import java.lang.Integer;
@@ -32,7 +35,7 @@ public class Parsers
     public Parsers () {};
 
     /**
-     * 
+     *
      */
     public static NormalizedMetadata ddi(Path ddiPath) throws IOException
     {
@@ -63,9 +66,14 @@ public class Parsers
                                       authors,
                                       raw,
                                       dtCoverage.start,
-                                      dtCoverage.end
+                                      dtCoverage.end,
+                                      DDIStandard
                                       );
     }
+    public static MetadataStandard 
+        DDIStandard = new MetadataStandard("ddi", 
+            "http://www.ddialliance.org/Specification/" +
+            "DDI-Codebook/2.5/XMLSchema/field_level_documentation.html");
 
     /**
      *
@@ -97,9 +105,14 @@ public class Parsers
             authors, 
             raw, 
             dtCoverage.start,
-            dtCoverage.end
+            dtCoverage.end,
+            EMLStandard
         );
     }
+    public static MetadataStandard 
+        EMLStandard = new MetadataStandard("eml", 
+            "https://knb.ecoinformatics.org/" +
+            "#external//emlparser/docs/eml-2.1.1/index.html");
 
     private static String ddiTitle(Document doc)
     {

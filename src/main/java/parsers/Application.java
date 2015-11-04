@@ -1,4 +1,7 @@
-package models;
+package parsers;
+
+import models.NormalizedMetadata;
+import models.NormalizedMetadataRepository;
 
 // jdk
 import java.util.Arrays;

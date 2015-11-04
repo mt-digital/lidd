@@ -1,6 +1,7 @@
-import models.Parsers;
+import parsers.Parsers;
 import models.NormalizedMetadata;
 import models.NormalizedMetadataRepository;
+import models.MetadataStandard;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -60,6 +61,10 @@ public class ParsersTest
         String title;
         String[] authors;
         DateTime startDateTime, endDateTime;
+
+        MetadataStandard emlStandard = 
+            new MetadataStandard("eml", "https://knb.ecoinformatics.org/" +
+                "#external//emlparser/docs/eml-2.1.1/index.html");
         
         // eml1.xml
         title = "88dehltg.txt";
@@ -68,7 +73,7 @@ public class ParsersTest
         endDateTime = new DateTime(1988, 12, 31, 23, 59);
 
         nmTest(Standard.EML, "data/test/eml1.xml", title, authors, 
-                startDateTime, endDateTime);
+                startDateTime, endDateTime, emlStandard);
 
         // eml2.xml
         title = 
@@ -81,7 +86,7 @@ public class ParsersTest
         endDateTime = new DateTime(2009, 9, 30, 23, 59);
 
         nmTest(Standard.EML, "data/test/eml2.xml", 
-            title, authors, startDateTime, endDateTime);
+            title, authors, startDateTime, endDateTime, emlStandard);
 
         // eml3.xml
         title = "Santa Rita Experimental Range site, station Santa Rita Experimental Range pastures where the mesquite were killed and the pastures were burned: pasture 2S, study of plant cover of Krameria parvifolia in units of percent on a yearly timescale";
@@ -91,7 +96,7 @@ public class ParsersTest
         endDateTime = new DateTime(2006, 12, 31, 23, 59);
 
         nmTest(Standard.EML, "data/test/eml3.xml", 
-            title, authors, startDateTime, endDateTime);
+            title, authors, startDateTime, endDateTime, emlStandard);
 
         // eml4.xml
         title = "Sevilleta site, station Rio Salado Grass Study Site, study of animal abundance of Rodentia in units of numberPerTrappingWeb on a yearly timescale";
@@ -101,9 +106,8 @@ public class ParsersTest
         endDateTime = new DateTime(1998, 12, 31, 23, 59);
         
         nmTest(Standard.EML, "data/test/eml4.xml",
-            title, authors, startDateTime, endDateTime);
+            title, authors, startDateTime, endDateTime, emlStandard);
     }
-
 
     /**
      * Check expected parsing functionality of DDI parser.
@@ -114,6 +118,11 @@ public class ParsersTest
         String title;
         String[] authors;
         DateTime startDateTime, endDateTime;
+
+        MetadataStandard ddiStandard = 
+            new MetadataStandard("ddi", 
+                "http://www.ddialliance.org/Specification/" +
+                "DDI-Codebook/2.5/XMLSchema/field_level_documentation.html");
          
         // 00010.xml
         title = "United States Congressional District Data Books, 1961-1965";
@@ -123,7 +132,7 @@ public class ParsersTest
         endDateTime = new DateTime(1965, 12, 31, 23, 59);
 
         nmTest(Standard.DDI, "data/test/00010.xml", title, authors,
-            startDateTime, endDateTime);
+            startDateTime, endDateTime, ddiStandard);
         
         // 13233.xml has <timePrd event="single" date="2000" cycle="P1"></timePrd>
         title =
@@ -134,7 +143,7 @@ public class ParsersTest
         endDateTime = new DateTime(2000, 12, 31, 23, 59);
 
         nmTest(Standard.DDI, "data/test/13233.xml", title, authors,
-            startDateTime, endDateTime);
+            startDateTime, endDateTime, ddiStandard);
 
         // 09248.xml has shorter time period with full iso
         title =
@@ -145,7 +154,7 @@ public class ParsersTest
         endDateTime = new DateTime(1989, 5, 22, 23, 59);
 
         nmTest(Standard.DDI, "data/test/09248.xml", title, authors,
-            startDateTime, endDateTime);
+            startDateTime, endDateTime, ddiStandard);
 
         // 36053.xml has three authors
         title = "Cognition and Aging in the USA (CogUSA) 2007-2009";
@@ -153,6 +162,9 @@ public class ParsersTest
                 {"McArdle, John", "Rodgers, Willard", "Willis, Robert"};
         startDateTime = new DateTime(2007, 1, 1, 0, 0);
         endDateTime = new DateTime(2009, 12, 31, 23, 59);
+
+        nmTest(Standard.DDI, "data/test/36053.xml", title, authors,
+            startDateTime, endDateTime, ddiStandard);
     }
 
     /**
@@ -160,7 +172,8 @@ public class ParsersTest
      */
     private void nmTest(Standard standard, 
         String testFile, String title, String[] authors,
-        DateTime startDateTime, DateTime endDateTime)
+        DateTime startDateTime, DateTime endDateTime,
+        MetadataStandard metadataStandard)
             throws IOException, Exception
     {
         Path path = Paths.get(testFile);
@@ -168,7 +181,8 @@ public class ParsersTest
         String raw = new String(Files.readAllBytes(path));
         
         NormalizedMetadata expectedNm = new NormalizedMetadata(
-            title, authors, raw, startDateTime, endDateTime
+            title, authors, raw, startDateTime, endDateTime, 
+            metadataStandard
         );
 
         NormalizedMetadata generatedNm = new NormalizedMetadata();
@@ -184,7 +198,8 @@ public class ParsersTest
 
         assertTrue(
             "\nExpected:\n\t" + expectedNm + "\nGenerated:\n\t" + generatedNm,
-            expectedNm.equals(generatedNm)); 
+            expectedNm.equals(generatedNm)
+        ); 
     }
     private enum Standard { DDI, EML, DC, FGDC }
 }
